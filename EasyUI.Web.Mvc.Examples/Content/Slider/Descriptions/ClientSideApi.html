@@ -1,0 +1,32 @@
+﻿<p>
+    This example shows how to use the client-side API of EasyUI Slider for ASP.NET MVC and EasyUI RangeSlider for ASP.NET MVC.
+</p>
+<p>
+    To use the client-side API you should first retrieve the slider client-side object.
+    The following code snippet shows how to do this:
+</p>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot;&gt;
+function getSlider(){
+    //"Slider" is the value specified by the Name() method.
+    return $("#Slider").data("tSlider");
+}
+&lt;/script&gt;
+</pre>
+<p>
+    Available client-side methods:
+</p>
+<ul>
+    <li>
+        You can set value with the <strong>value(...)</strong> method. This method accepts <strong>number</strong> value.
+    </li>
+    <li>
+        You can retrieve selected date with the <strong>value()</strong> method with no parameters. This method returns <strong>number</strong> value.
+    </li>
+    <li>
+        You can enable slider with the <strong>enable()</strong> method.
+    </li>
+    <li>
+        You can disable slider with the <strong>disable()</strong> method.
+    </li>
+</ul>

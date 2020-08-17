@@ -1,0 +1,42 @@
+﻿<p>
+    This example shows how to use a custom column command in EasyUI Grid for ASP.NET
+    MVC. Custom commands can be configured to call action methods by making server side or ajax requests. In this particular
+    example the custom command is requesting JSON from an action method and displays it using EasyUI Window for ASP.NET MVC
+</p>
+<p>
+    To define a custom column command use the following code
+</p>
+<pre class="prettyprint">
+View:
+&lt;%= Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        .Columns(columns =&gt; columns
+            {
+            columns.Command(commands =&gt; 
+                // Define a custom command
+                commands.Custom()
+                    // Set the text of the button
+                    .Text("Customer Details")
+                    // Specify which fields from the bound data item to include in the route (pass as action method arguments)
+                    .DataRouteValues(route =&gt; route.Add(o =&gt; o.OrderID).RouteKey("orderID"))
+                    // Name of the custom command (used to differentiate between multiple custom commands)
+                    .Name("viewDetails")
+                    // Make ajax requests
+                    .Ajax(true)
+                    // Which action method to call
+                    .Action("ViewDetails", "Grid")    
+                ));
+            }
+        )
+%&gt;
+Controller:
+
+public JsonResult ViewDetails(int orderID) // this argument comes from the data item (defined via DataRouteValues)
+{
+    // Get the order by the specified orderID
+    var order = GetOrders()
+                    .FirstOrDefault(o =&gt; o.OrderID == orderID);
+
+    return Json(new { customer = order.Customer });
+}
+</pre>

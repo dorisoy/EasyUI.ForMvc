@@ -1,0 +1,23 @@
+﻿<p>
+    This example shows how EasyUI Slider for ASP.NET MVC 
+    can be used to edit <em>Model property</em>.
+</p>
+<p>
+    You can decorate your model with metadata attributes to specify its data type, 
+    UI hint (name of the ASCX to use) etc:
+</p>
+<pre class="prettyprint">
+        [UIHint("Slider")]
+        public decimal UnitPrice
+        {
+            get;
+            set;
+        }
+</pre>
+<p>
+    You can review <strong>ProductDto.cs</strong> file for more information.
+</p>
+<p>
+    The next step is to create user control, which will be used to edit the Model property.
+    In this demo <strong>Slider.ascx</strong> is used to edit the <em>UnitPrice</em> property.
+</p>

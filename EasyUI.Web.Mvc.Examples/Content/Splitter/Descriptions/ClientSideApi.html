@@ -1,0 +1,31 @@
+﻿<p>
+    This example shows how to use the client-side API of EasyUI Splitter for ASP.NET MVC.
+</p>
+<p>
+    To use the client-side API you should first retrieve the splitter client-side object.
+    The following code snippet shows how to do this:
+</p>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot;&gt;
+function getSplitter(){
+    // "Splitter" is the value specified by the Name() method.
+    var splitter = $("#Splitter").data("tSplitter");
+    return splitter;
+}
+&lt;/script&gt;
+</pre>
+<p>
+    The available client-side methods are:
+</p>
+<ul>
+    <li><code>splitter.<strong>expand</strong>(<em>pane</em>)</code> - expands a pane.</li>
+    <li><code>splitter.<strong>collapse</strong>(<em>pane</em>)</code> - collapses a pane.</li>
+    <li><code>splitter.<strong>ajaxRequest</strong>(<em>pane</em> [, <em>URL</em>])</code> - refreshes the content of a pane with specified content URL (load-on-demand).
+        If <code><em>URL</em></code> is specified, data is fetched from where it points to.</li>
+    <li><code>splitter.<strong>toggle</strong>(<em>pane</em> [, <em>shouldExpand</em>])</code> - toggles the expanded/collapsed state of the pane.
+        If <code><em>shouldExpand</em></code> is specified, the pane gets expanded if it is <code>true</code>, and collapsed if it is <code>false</code>.
+    </li>
+</ul>
+<p>
+    All of the above methods accept <em>pane</em> as either a <strong>DOM element</strong>, <strong>jQuery selector</strong> or a <strong>jQuery object</strong>.
+</p>

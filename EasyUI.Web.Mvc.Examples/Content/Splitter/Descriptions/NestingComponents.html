@@ -1,0 +1,23 @@
+﻿<p>
+    This example shows how to nest other components in EasyUI Splitter for ASP.NET MVC.
+</p>
+<p>
+    To nest other components in the splitter, use the <code>Content</code> method:
+</p>
+
+<pre class="prettyprint">
+&lt;% Html.EasyUI().Splitter()
+        .Name("Splitter")
+        <em>.Content(() =>
+        {%></em>
+            &lt;%= Html.EasyUI().PanelBar()
+                .Name("PanelBar")
+                /* ... */
+            %&gt;
+        <em>&lt;%});</em>
+%&gt;
+</pre>
+
+<p>
+    Nesting of splitters is supported. This way, you can have a mixed vertical / horizontal layout.
+</p>

@@ -1,0 +1,52 @@
+﻿<p>
+    This example shows how to use aggregates in EasyUI Grid for ASP.NET MVC which is ajax-bound.
+</p>
+<p>
+    The following aggregates are supported:
+</p>
+<ul>
+    <li>Average</li>
+    <li>Count</li>
+    <li>Min</li>
+    <li>Max</li>
+    <li>Sum</li>
+</ul>
+<p>
+    To specify the aggregates for a column use the <code>Aggregates</code> method:
+</p>
+<pre class="prettyprint">
+columns.Bound(o =&gt; o.UnitsInStock)
+        <em>.Aggregate(aggregates =&gt; aggregates.Count().Min().Max())</em>
+</pre>
+<p>
+    Aggregate results can be displayed in three locations:
+</p>
+<ol>
+    <li>
+        In the group header:
+<pre class="prettyprint">
+columns.Bound(o =&gt; o.UnitsInStock)
+        .Aggregate(aggregates =&gt; aggregates.Count())
+        <em>.ClientGroupHeaderTemplate("&lt;#= Title #&gt;: &lt;#= Key #&gt; (Count: &lt;#= Count #&gt;)");</em>
+</pre>
+    </li>
+    <li>
+        In the group footer:
+<pre class="prettyprint">
+columns.Bound(o =&gt; o.UnitsOnOrder)
+        .Aggregate(aggregates =&gt; aggregates.Average())
+        <em>.ClientGroupFooterTemplate("Average: &lt;#= Average #&gt;");</em>
+</pre>
+    </li>
+    <li>
+        In the grid footer:
+<pre class="prettyprint">
+columns.Bound(o =&gt; o.UnitsInStock)
+        .Aggregate(aggregates =&gt; aggregates.Count().Min().Max())
+        <em>.ClientFooterTemplate(
+            "&lt;div&gt;Min: &lt;#= Min #&gt;&lt;/div&gt;" +
+            "&lt;div&gt;Max: &lt;#= Max #&gt;&lt;/div&gt;"
+        );</em>
+</pre>
+    </li>
+</ol>

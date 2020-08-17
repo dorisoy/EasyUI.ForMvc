@@ -1,0 +1,59 @@
+﻿<p>
+    This example shows how to bind EasyUI ComboBox for ASP.NET MVC to a JSON object.
+</p>
+<p>
+    The required steps are:
+</p>
+<ol>
+    <li>Attach an event handler to the <strong>OnDataBinding</strong> client-side event:
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().ComboBox()
+        .Name("ComboBox")
+        .ClientEvents(events => events
+            <em>.OnDataBinding("onDataBinding")</em>
+        )
+%&gt;
+</pre>
+    </li>
+    
+    <li>Add a data binding handler function that will load the required data and pass it to the combobox
+<pre class="prettyprint">
+&lt;script type="text/javascript"&gt;
+    function onDataBinding(e) {
+        var combobox = $('#ComboBox').data('tComboBox');
+
+        <em>var dataSource = [
+                { Text: "Product 1", Value: "1" },
+                { Text: "Product 2", Value: "2" },
+                { Text: "Product 3", Value: "3" },
+                { Text: "Product 4", Value: "4" },
+                { Text: "Product 5", Value: "5" },
+                { Text: "Product 6", Value: "6" },
+                { Text: "Product 7", Value: "7" },
+                { Text: "Product 8", Value: "8" },
+                { Text: "Product 9", Value: "9" }
+            ]</em>;
+
+        combobox.dataBind(dataSource);
+
+    }
+&lt;/script&gt;
+</pre>
+    <p>
+        <strong>AutoComplete component should be bind to a list of <em>string elements</em>.</strong>
+    </p>
+<pre class="prettyprint">
+&lt;script type="text/javascript"&gt;
+    function onDataBinding(e) {
+        var autocomplete = $('#AutoComplete').data('tAutoComplete');
+
+        <em>var dataSource = ["Product 1", "Product 2", "Product 3", 
+                                "Product 4", "Product 5", "Product 6", 
+                                "Product 7", "Product 8", "Product 9"]</em>;
+
+        autocomplete.dataBind(dataSource);
+    }
+&lt;/script&gt;
+</pre>
+    </li>
+</ol>

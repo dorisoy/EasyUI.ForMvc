@@ -1,0 +1,2 @@
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\Telerik.Web.Mvc.Tests\obj\Debug\EasyUI.Web.Mvc.Tests.csprojResolveAssemblyReference.cache
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\EasyUI.Web.Mvc.Tests\obj\Debug\EasyUI.Web.Mvc.Tests.csprojResolveAssemblyReference.cache

@@ -1,0 +1,54 @@
+﻿/* CSS classes used in the styles drop-down */
+
+.highlight
+{
+    background: yellow;
+}
+
+.code
+{
+    white-space:pre;
+    font: 11px monospace;
+}
+
+/* document styling - colors from Cherry Cheesecake theme, Adobe Kuler - http://kuler.adobe.com/#themeID/2354 */
+
+html,body
+{
+    background: #fcfae1;
+    color: #4c1b1b;
+}
+
+h1,h2,h3,p,ul,ol
+{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+ul ol, ul ul, ol ol, ol ul { margin-left: 0; }
+
+h1
+{
+    color: #b9121b;
+    border-bottom: 1px solid;
+    font-variant: small-caps;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+h2
+{
+    border-bottom: 1px dotted;
+    font-variant: small-caps;
+}
+
+a { color: #bd8d46; }
+
+abbr { border-bottom: 1px dotted; }
+
+blockquote 
+{
+    margin-left: 40px;
+    padding-left: 40px;
+    background: transparent url('blockquote.png') no-repeat 0 0;
+    min-height: 2em;
+}

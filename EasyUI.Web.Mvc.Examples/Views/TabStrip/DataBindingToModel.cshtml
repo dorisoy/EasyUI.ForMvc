@@ -1,0 +1,14 @@
+﻿@model IEnumerable<NavigationData>
+
+@{ Html.EasyUI().TabStrip()
+          .Name("TabStrip")
+          .BindTo(Model,
+                  (item, navigationData) =>
+                  {
+                      item.Text = navigationData.Text;
+                      //item.ImageUrl = navigationData.ImageUrl;
+                      item.IcoStyle = "fa fa-file";
+                      item.Url = navigationData.NavigateUrl;
+                  })
+          .Render();
+}

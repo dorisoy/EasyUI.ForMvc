@@ -1,0 +1,50 @@
+﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage" %>
+<asp:content contentPlaceHolderID="MainContent" runat="server">
+
+    <div class="t-rtl">
+        <% Html.EasyUI().TreeView()
+                .Name("TreeView")
+                .HtmlAttributes(new { style = "float: right; width: 300px; margin-bottom: 30px;" })
+                .Items(treeViewItem =>
+		        {
+			        treeViewItem.Add().Text("UI Components")
+				        .Items(item =>
+				        {
+					        item.Add().Text("ASP.NET WebForms");
+					        item.Add().Text("Silverlight");
+					        item.Add().Text("ASP.NET MVC");
+					        item.Add().Text("WinForms");
+					        item.Add().Text("WPF");
+				        })
+				        .Expanded(true);
+
+			        treeViewItem.Add().Text("Data")
+				        .Items(item =>
+				        {
+					        item.Add().Text("OpenAccess ORM");
+					        item.Add().Text("Reporting");
+				        });
+
+			        treeViewItem.Add().Text("TFS Tools")
+				        .Items(item =>
+				        {
+					        item.Add().Text("Work Item Manager");
+					        item.Add().Text("Project Dashboard");
+				        });
+
+			        treeViewItem.Add().Text("Automated Testing")
+				        .Items(item =>
+				        {
+					        item.Add().Text("Web Testing Tools");
+				        });
+
+			        treeViewItem.Add().Text("ASP.NET CMS")
+				        .Items(item =>
+				        {
+					        item.Add().Text("Sitefinity CMS");
+				        });
+		        })
+		        .Render(); %>
+    </div>
+	
+</asp:content>

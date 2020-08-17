@@ -1,0 +1,119 @@
+@using EasyUI.Web.Mvc;
+
+@*<div id="examples-search" class="menu-bar">
+        <label for="search-input"></label>
+
+        @(Html.EasyUI().ComboBox()
+                .Name("search")
+                .Encode(false)
+                .DataBinding(binding => binding.Ajax().Select("_Search", "Search").Cache(false))
+                .HtmlAttributes(new { style = "width: 183px; z-index:100;" })
+                .DropDownHtmlAttributes(new { id = "examples-search-popup", style = "width: 188px;" })
+                .ClientEvents(events => events.OnLoad("searchBoxLoad"))
+                .HighlightFirstMatch(true)
+        )
+
+    </div>
+
+    @{ Html.EasyUI().ScriptRegistrar().OnDocumentReady(@<text>window.examplesBaseUrl = '@Url.Content("~/razor/")';</text>); }
+
+    @(Html.EasyUI().Menu()
+            .Name("resources")
+            .HtmlAttributes(new { @class = "menu-bar" })
+            .OpenOnClick(true)
+            .Items(menu =>
+            {
+                menu.Add().Text("技术交流")
+                    .Items(resources =>
+                    {
+                        resources.Add().Text("在线文档").Url("http://help.mschen.com");
+                        resources.Add().Text("社区").Url("http://forums.mschen.com");
+                        resources.Add().Text("博客").Url("http://blogs.mschen.com");
+                        resources.Add().Text("视频").Url("http://tv.mschen.com/");
+                        resources.Add().Text("问题跟踪").Url("http://support.mschen.com");
+                    });
+
+
+            }))
+
+    <div id="call-to-action" class="menu-bar">
+        <a href="#" onclick="if (typeof _gaq != 'undefined') _gaq.push(['_trackPageview', '/mvc-demo/topbutton/trial']);"><span>免费下载</span></a>
+        <a href="#" onclick="if (typeof _gaq != 'undefined') _gaq.push(['_trackPageview', '/mvc-demo/topbutton/buy']);"><span>购买</span></a>
+    </div>
+
+    <div id="product-lines">
+        <ul>
+            <li><a href="#">关于</a></li>
+            <li><a href="#">团队</a></li>
+            <li><a href="#">联系方式</a></li>
+        </ul>
+    </div>*@
+
+
+
+<nav id="js-Bar" class="Bar">
+    @{
+        var style = "container";
+        var with = "width:219px";
+        if (ViewData["layout"] != null)
+        {
+            style = ViewData["layout"].ToString() == "2" ? "container2" : "container";
+            with = ViewData["layout"].ToString() == "2" ? "width:219px" : "";
+        }
+
+    }
+    <div class="@style">
+        <div class="Bar-table sf_cols">
+
+            <input type="checkbox" id="Bar-controlMe">
+            <label for="Bar-controlMe" class="Bar-showMe"></label>
+            <label for="Bar-controlMe" class="Bar-hideMe"></label>
+            <!--logo-->
+            <div class="sf_colsIn Bar-logo-container" style="@with">
+                <a href="/" class="Bar-logo">
+                    <img alt="EasyUI For ASP.NET MVC" src="@Url.Content("~/Content/images/logo-reversed.png")" width="214" height="22">
+                </a>
+            </div>
+            <!--menu-->
+            <div class="sf_colsIn Bar-slide">
+
+
+                @if (style == "container2")
+                {
+                    @(Html.EasyUI().Menu().UseDefaultClassStyle(false)
+                            .HtmlAttributes(new { @class = "Bar-menu" })
+                            .Name("Menu_top")
+                            .Items(items =>
+                            {
+                                items.Add().Text("Back").Url("/")
+                        .SpriteCssClasses("fa fa-reply")
+                        .HtmlAttributes(new { @class = "Bar-menu-link",style = "text-align:left"})
+                        .UseDefaultClassStyle(false);
+                            }))
+                }
+                        else
+                        {
+
+                    <ul class="Bar-menu">
+                        <li><a href="/Grid" class="Bar-menu-link">Demo</a></li>
+                        <li><a href="http://www.jeasyui.com/" class="Bar-menu-link">EasyUI</a></li>
+                        <li><a href="http://bbs.jeasyuicn.com/" class="Bar-menu-link">Forum</a></li>
+                        <li><a href="http://jquery.cuishifeng.cn/" class="Bar-menu-link">JQuery API</a></li>
+                        <li><a href="#" class="Bar-menu-link">About</a></li>
+                    </ul>
+                }
+            </div>
+            <!--search-->
+            <div>
+
+                @*<div id="theming"><a href="#" class="t-drop-down">@Html.GetCurrentTheme()</a></div>
+                <script type="text/javascript">
+	    var currentComponent = '@ViewContext.RouteData.Values["Controller"]',
+            themePreviewsLocation = '@Url.Content("~/Content/Images/Themes")';
+                </script>*@
+
+
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,28 @@
+﻿
+
+
+    @(Html.EasyUI().DatePicker()
+            .Name("DatePicker")
+            .HtmlAttributes(new { style = "width: 8em" })
+            .Value(DateTime.Today)
+    )
+
+     @Html.Partial("_CulturePicker") 
+
+    @{ Html.EasyUI().ScriptRegistrar().Globalization(true); }
+
+
+@section HeadContent {
+
+
+    <style type="text/css">
+        .configurator
+        {
+            float: right; 
+            margin: 0 200px 0 0; 
+            width: 200px;
+        }
+    </style>
+
+
+}

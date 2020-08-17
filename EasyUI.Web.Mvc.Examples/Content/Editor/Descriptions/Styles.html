@@ -1,0 +1,26 @@
+﻿<p>
+    It is often required to define common styles when editing content. This example shows how to do that in EasyUI Editor for ASP.NET MVC.
+</p>
+<p>
+    To define a style use the <code>Style</code> method. Then specify the user-friendly name of the style and the name of the CSS class to apply.
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Editor()
+        .Name("Editor")
+        .Tools(tools =&gt; tools
+            <em>.Style(styles =&gt; styles
+                .Add("Hightlight", "highlight"))</em>
+        )
+</pre>
+<p>
+    If you want to preview the styles you should include the required CSS file in the editor using the <code>StyleSheets</code> method:
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Editor()
+        .Name("Editor")
+        .Tools(tools =&gt; tools
+            .Style(styles =&gt; styles
+                .Add("Hightlight", "highlight"))
+        )
+        <em>.StyleSheets(styleSheets =&gt; styleSheets.Add("editorStyles.css"))</em>
+</pre>

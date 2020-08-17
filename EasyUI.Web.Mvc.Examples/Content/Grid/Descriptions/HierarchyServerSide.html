@@ -1,0 +1,46 @@
+﻿<p>
+    This example demonstrates how to use the server detail template in order to achieve three level hierarchy:
+    Employees -> Orders -> OrderDetails with server binding.
+</p>
+<p>
+    Important notes:
+</p>
+<ol>
+    <li>Use the <code>Template</code> method to set the server template (used only for server binding scenarios).</li>
+    <li>Make sure the <code>Name</code> of any UI component defined in the template is unique. A property of the bound object can be used to ensure
+        such uniqueness: <code>Name("Orders_" + e.EmployeeID)</code>.
+    </li>
+    <li>
+        Calling the <code>Render</code> method is required in order to output the contents of any UI components defined in the server detail template.
+    </li>
+</ol>
+<p>Example:</p>
+<pre class="prettyprint">
+&lt;% Html.EasyUI().Grid(Model)
+       .Name("Employees")
+       .DetailView(detailView =&gt; <em>detailView.Template</em>(e =&gt;
+       {
+           %&gt;
+               &lt;% Html.EasyUI().Grid(e.Orders)
+                       <em>.Name("Orders_" + e.EmployeeID)</em>
+                       .DetailView(ordersDetailView =&gt; <em>ordersDetailView.Template</em>(o =&gt;
+                       {
+                           %&gt;
+                               &lt;%= Html.EasyUI().Grid(o.Order_Details)
+                                       <em>.Name("OrderDetails_" + o.OrderID)</em>
+                                       .Pageable()
+                                       .Sortable()
+                               %&gt;
+                           &lt;%
+                       }))
+                       .Pageable()
+                       .Sortable()
+                       .Render();
+               %&gt;
+           &lt;%    
+       }))
+       .Pageable()
+       .Sortable()
+       .Render();
+%&gt;
+</pre>

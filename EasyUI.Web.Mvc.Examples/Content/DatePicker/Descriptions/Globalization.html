@@ -1,0 +1,14 @@
+﻿<h4>EasyUI DatePicker for ASP.NET MVC globalization</h4>
+
+<p>
+    DatePicker can be globalized using <strong>Globalization(...)</strong> of the ScriptRegistrar component. Here is a code snippet showing how to turn on the
+    component's globalization:
+</p>
+<pre class="prettyprint">
+&lt;% Html.EasyUI().ScriptRegistrar().Globalization(true); %&gt;
+</pre>
+<p>
+    The ScriptRegistrar will register $.easyui.cultureInfo object with globalized values, 
+    which will override the predefined <em>cultureInfo</em> object on the client.
+</p>
+

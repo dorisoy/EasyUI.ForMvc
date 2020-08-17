@@ -1,0 +1,7 @@
+@model DateTime
+
+@(Html.EasyUI().DatePicker()
+        .Name(ViewData.TemplateInfo.GetFullHtmlFieldName(string.Empty))
+        .HtmlAttributes(new { id = ViewData.TemplateInfo.GetFullHtmlFieldName(string.Empty) + "_wrapper" })
+        .Value(Model > DateTime.MinValue? Model : DateTime.Today)
+)

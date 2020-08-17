@@ -1,0 +1,36 @@
+﻿<p>
+This example shows how EasyUI Grid for ASP.NET MVC can infer its columns based on the properties of the data item it is bound to. A columns is created for every public 
+property of simple type (integer, string, date, enum and boolean). 
+</p>
+<p>
+Column titles are inferred from the property name using pascal-case splitting - for example if the property name 
+is <strong>CustomerID</strong> the inferred column title will be <strong>"Customer ID"</strong>.
+</p>
+<p>
+The following is an example of simple definition of the Grid:
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        .Sortable()
+        .Scrollable()
+        .Pageable()
+ %&gt;
+</pre>
+<p>
+The <strong>AutoGenerate</strong> method can be used to further customize the generated columns' settings:
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        .Columns(columns =>
+                {   
+                    columns.<strong>AutoGenerate(column =>
+                        {                            
+                            column.Width = "150px";
+                            if (column.Member == "CustomerID")
+                                column.Visible = false;
+                        })</strong>;                        
+                })
+ %&gt;
+</pre>

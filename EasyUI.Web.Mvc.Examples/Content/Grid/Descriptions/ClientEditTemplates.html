@@ -1,0 +1,25 @@
+﻿<p>
+    This example shows how to use client edit template with EasyUI Grid for ASP.NET MVC. There are a few built-in templates for Date, Currency and Number editing
+    which can be found in the <strong>EditorTemplates</strong> folder in the installation.
+</p>
+<p>
+        Decorate your model with metadata attributes to specify its data type, UI hint (name of the ASCX to use) etc:
+</p>
+<pre class="prettyprint">
+    public class EditableOrder
+    {
+        [ReadOnly(true)]
+        public int OrderID { get; set; }
+
+        // EditorTemplates/ClientEmployee.ascx will be used as editor template.
+        <em>[UIHint("ClientEmployee"), Required]</em>
+        public string Employee { get; set; }
+
+        // EditorTemplates/Date.ascx will be used as display template.
+        [DataType(DataType.Date), Required]
+        public DateTime OrderDate { get; set; }
+
+        [DataType(DataType.Currency), Required]
+        public decimal Freight { get; set; }
+    }
+</pre>

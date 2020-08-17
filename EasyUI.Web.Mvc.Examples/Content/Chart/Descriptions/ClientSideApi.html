@@ -1,0 +1,26 @@
+﻿<p>
+    This example shows how to use the client-side API of EasyUI Chart for ASP.NET MVC.
+</p>
+<p>
+    To use the client-side API you should first retrieve the chart's client-side object.
+</p>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot;&gt;
+function getChart(){
+    // The chart name is &quot;chart&quot;
+    return $(&quot;#chart&quot;).data(&quot;tChart&quot;);
+}
+&lt;/script&gt;
+</pre>
+<p>
+    Available client-side methods:
+</p>
+<ul>
+    <li>
+        <em>refresh()</em> repaints the Chart. <strong>Starting with the 2011 Q3 release this method no longer rebinds the Chart!</strong>
+    </li>
+    <li>
+        <em>rebind(data)</em> rebinds a client-side bound chart.
+        You can pass a data object containing additional arguments to the action method.
+    </li>
+</ul>

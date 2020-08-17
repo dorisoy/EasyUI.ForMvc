@@ -1,0 +1,14 @@
+﻿<p>
+    This example shows how EasyUI Editor for ASP.NET MVC is being validated through the built-in server-side validation capabilities of ASP.NET MVC.
+</p>
+<pre class="prettyprint">
+
+&lt%= Html.ValidationSummary() %&gt;
+&lt% using (Html.BeginForm("Action", "Controller")) { %&gt
+    &lt%= Html.EasyUI().Editor()
+              .Name("Notes")
+    %>
+    &lt%= Html.ValidationMessage(e => e.Notes, "*") %&gt
+    &lt;input type="submit" value="Post" /&gt
+<% } %>
+</pre>

@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage"  MasterPageFile="~/Areas/Aspx/Views/Shared/Tow.Master" %>
+<%-- Examples-specific markup, applied to the Site.Master --%>
+
+<asp:Content runat="server" contentPlaceHolderID="HeadContent">
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</asp:Content>
+
+
+<asp:Content runat="server" contentPlaceHolderID="MainContent">
+
+
+	<div class="example <%: "t-" + Html.GetCurrentTheme() %>">
+	    <h2 class="example-title"><%: Html.ExampleTitle() %></h2>
+
+
+	   <%-- <div id="theming">
+            <a href="#" class="t-drop-down"><%: Html.GetCurrentTheme() %></a>
+	    </div>--%>
+
+	    <script type="text/javascript">
+	        var currentComponent = '<%: ViewContext.RouteData.Values["Controller"] %>',
+                themePreviewsLocation = '<%: ResolveUrl("~/Content/Images/Themes") %>';
+	    </script>
+
+		<asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+	</div>
+
+    <div class="theme-agnostic">
+		<% Html.RenderPartial("CodeViewer"); %>
+		<% Html.RenderPartial("GetMoreThanExpected"); %>
+	</div>
+</asp:Content>

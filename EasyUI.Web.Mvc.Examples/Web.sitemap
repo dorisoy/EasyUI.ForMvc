@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+  <siteMapNode title="Home" controller="Home" action="FirstLook">
+    <siteMapNode title="Home" controller="Home" action="FirstLook" description="首页" icostyle="fa fa-home"/>
+
+    <!--<siteMapNode title="InputBox" description="文本框" icostyle="fa fa-wrench">
+      <siteMapNode controller="InputBox" action="FirstLook" title="First Look"  icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="InputBox" action="Standard" title="Standard" icostyle="fa fa-angle-right" />
+      <siteMapNode controller="InputBox" action="EasyIcons" title="Easy Icons" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="InputBox" action="ColorPicker" title="Color Picker" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="InputBox" action="Options" title="Options"  icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="InputBox" action="Masked" title="Masked"  icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="InputBox" action="SpecialitySpinners" title="Speciality Spinners"  icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="InputBox" action="Checkboxes" title="Checkboxes"  icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="InputBox" action="Radios" title="Radios"  icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="InputBox" action="RtlSupport" title="RTL support" icostyle="fa fa-angle-right"/>
+    </siteMapNode>-->
+    
+    <siteMapNode title="Calendar" description="日历" icostyle="fa fa-calendar">
+      <siteMapNode controller="Calendar" action="FirstLook" title="First Look"  icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Calendar" action="Selectaction" title="Select Action" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Calendar" action="Globalization" title="Globalization" icostyle="fa fa-angle-right" />
+      <siteMapNode controller="Calendar" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Calendar" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Calendar" action="Accessibility" title="Accessibility"  icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Calendar" action="RtlSupport" title="RTL support" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="Chart" isNew="true" description="图表" icostyle="fa fa-bar-chart-o">
+      <siteMapNode controller="Chart" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Chart" action="PieChart" title="Pie chart" isNew="true" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Chart" action="ScatterChart" title="Scatter chart" isNew="true" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Chart" action="ScatterLineChart" title="Scatter line chart" isNew="true" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Chart" action="AjaxBinding" title="Ajax Binding" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Chart" action="ClientSideApi" title="Client-side API" isNew="true" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Chart" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Chart" action="HighPerformance" title="High Performance" isNew="true" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Chart" action="CombinationChart" title="Combination Chart" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Chart" action="MissingValues" title="Missing Values" icostyle="fa fa-angle-right" />
+    </siteMapNode>
+    <siteMapNode title="ComboBox" description="组合框" icostyle="fa fa-check-square">
+      <siteMapNode controller="ComboBox" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode title="Filtering">
+        <siteMapNode controller="ComboBox" action="FilteringClient" title="Client Filtering" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="ComboBox" action="FilteringServer" title="Server Filtering " icostyle="fa fa-angle-right"/>
+      </siteMapNode>
+      <siteMapNode controller="ComboBox" action="AnimationEffects" title="Animation Effects" icostyle="fa fa-angle-right" />
+      <siteMapNode controller="ComboBox" action="AjaxLoading" title="Load on Demand" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="ComboBox" action="ServerValidation" title="Server Validation" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="ComboBox" action="ClientValidation" title="Client Validation" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="ComboBox" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="ComboBox" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="ComboBox" action="ClientSideBinding" title="Client-side Binding" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="ComboBox" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="ComboBox" action="RtlSupport" title="RTL support" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="DatePicker" description ="日期选择器" icostyle="fa fa-clock-o">
+      <siteMapNode controller="DatePicker" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="DatePicker" action="DateParsing" title="Date parsing" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="DatePicker" action="EditTemplate" title="Edit Template" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="DatePicker" action="ServerValidation" title="Server Validation" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="DatePicker" action="ClientValidation" title="Client Validation" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="DatePicker" action="Globalization" title="Globalization" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="DatePicker" action="AnimationEffects" title="Animation Effects" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="DatePicker" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="DatePicker" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="DatePicker" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="DatePicker" action="RtlSupport" title="RTL support" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="Editor" description ="编辑器" icostyle="fa fa-list-alt">
+      <siteMapNode controller="Editor" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="ServerValidation" title="Server Validation" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="ClientValidation" title="Client Validation" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="Styles" title="Styles" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="Snippets" title="Snippets" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="ImageTool" title="Image Browser" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="CustomTools" title="Custom Tools" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="Localization" title="Localization" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="KeyboardNavigation" title="Keyboard navigation" isNew="true" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="RtlSupport" title="RTL support" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Editor" action="EditorInGrid" title="Editor In Grid" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="Grid" description ="数据表" icostyle="fa fa-list">
+      <siteMapNode controller="Grid" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode title="Data Binding">
+        <siteMapNode controller="Grid" action="ServerBinding" title="Server Binding" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="AjaxBinding" title="Ajax Binding" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="WebService" title="Web Service Binding" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="OperationMode" title="Operation Mode" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="CustomBinding" title="Custom Ajax Binding" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="CustomServerBinding" title="Custom Server Binding" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="ExternalServiceTwitter" title="Twitter Binding" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="ExternalServiceFacebook" title="Facebook Binding" icostyle="fa fa-angle-right"/>
+      </siteMapNode>
+      <siteMapNode title="Paging" description ="分页" >
+        <siteMapNode controller="Grid" action="Paging" title="Paging" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="PageOnScroll" title="Page On Scroll" icostyle="fa fa-angle-right"/>
+      </siteMapNode>
+      <siteMapNode controller="Grid" action="Sorting" title="Sorting" description ="排序" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="Filtering" title="Filtering" description ="筛选器" icostyle="fa fa-angle-right"/>
+      <siteMapNode title="Grouping/Aggregates" description ="分组">
+        <siteMapNode controller="Grid" action="Grouping" title="Grouping" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="AggregatesServerSide" title="Server Aggregates" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="AggregatesAjax" title="Ajax Aggregates" icostyle="fa fa-angle-right"/>
+      </siteMapNode>
+      <siteMapNode title="Master/Detail">
+        <siteMapNode controller="Grid" action="HierarchyServerSide" title="Server Hierarchy" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="HierarchyAjax" title="Ajax Hierarchy" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="DetailsServerSide" title="Server Detail Template" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="DetailsAjax" title="Client Detail Template" icostyle="fa fa-angle-right"/>
+      </siteMapNode>
+      <siteMapNode title="Editing">
+        <siteMapNode controller="Grid" action="EditingServerSide" title="Server Editing" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="EditingAjax" title="Ajax Editing" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="EditingWebService" title="Web Service Editing" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="EditingBatch" title="Batch Editing" icostyle="fa fa-angle-right"/>
+      </siteMapNode>
+      <siteMapNode title="Templates" description ="模板">
+        <siteMapNode controller="Grid" action="TemplatesServerSide" title="Server Templates" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="TemplatesClientSide" title="Client Templates" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="ServerRowTemplate" title="Server Row Template"  icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="ClientRowTemplate" title="Client Row Template" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="ServerEditTemplates" title="Server Edit Templates" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="ClientEditTemplates" title="Client Edit Templates" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="CustomToolBar" title="Custom ToolBar Template" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="HeaderFooterTemplates" title="Header &#38; Footer Templates" icostyle="fa fa-angle-right"/>
+      </siteMapNode>
+      <siteMapNode title="Selection">
+        <siteMapNode controller="Grid" action="SelectionServerSide" title="Server Selection" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="SelectionClientSide" title="Client Selection" icostyle="fa fa-angle-right"/>
+      </siteMapNode>
+      <siteMapNode title="CheckBoxes" description ="复选框">
+        <siteMapNode controller="Grid" action="CheckBoxesServerSide" title="Server CheckBoxes" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="CheckBoxesAjax" title="Ajax CheckBoxes" icostyle="fa fa-angle-right"/>
+      </siteMapNode>
+      <siteMapNode title="Custom Commands" isNew="true" description ="自定义命令">
+        <siteMapNode controller="Grid" action="CustomCommand" title="Toolbar Command (CSV Export)" icostyle="fa fa-angle-right"/>
+        <siteMapNode controller="Grid" action="CustomColumnCommand" title="Column Command" isNew="true" icostyle="fa fa-angle-right"/>
+      </siteMapNode>
+      <siteMapNode controller="Grid" action="ColumnResizing" title="Column Resizing" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="ColumnReordering" title="Column Reordering" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="ColumnSettings" title="Column Settings" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="ColumnContextMenu" title="Column ContextMenu" isNew="true" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="AutoGenerateColumns" title="Auto Generated Columns" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="ForeignKeyColumn" title="ForeignKey Column" isNew="true" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="CustomRoute" title="Custom Route" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="Localization" title="Localization" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="CustomFormatting" title="Custom Formatting" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="KeyboardNavigation" title="Keyboard navigation" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Grid" action="RtlSupport" title="RTL support" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="Menu" description ="菜单" icostyle="fa fa-th-list">
+      <siteMapNode controller="Menu" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Menu" action="SitemapBinding" title="SiteMap Binding" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Menu" action="DataBindingToModel" title="Binding to Model" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Menu" action="Templates" title="Templates" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Menu" action="Orientation" title="Orientation" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Menu" action="AnimationEffects" title="Animation Effects" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Menu" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Menu" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Menu" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Menu" action="Rtlsupport" title="RTL support" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Menu" action="Sprites" title="Sprites" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="NumericTextBox" description ="数字输入框" icostyle="fa fa-keyboard-o">
+      <siteMapNode controller="NumericTextBox" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="NumericTextBox" action="EditTemplate" title="Edit Template" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="NumericTextBox" action="ServerValidation" title="Server Validation" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="NumericTextBox" action="ClientValidation" title="Client Validation" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="NumericTextBox" action="Globalization" title="Globalization" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="NumericTextBox" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="NumericTextBox" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="NumericTextBox" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="NumericTextBox" action="RtlSupport" title="RTL support" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="PanelBar" description ="布局面板" icostyle="fa fa-columns">
+      <siteMapNode controller="PanelBar" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="PanelBar" action="SitemapBinding" title="SiteMap Binding" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="PanelBar" action="DataBindingToModel" title="Binding to Model" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="PanelBar" action="Templates" title="Templates" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="PanelBar" action="AjaxLoading" title="Load on Demand of Content" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="PanelBar" action="AnimationEffects" title="Animation Effects" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="PanelBar" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="PanelBar" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="PanelBar" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="PanelBar" action="RtlSupport" title="RTL support" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="PanelBar" action="Sprites" title="Sprites" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="Slider" description ="滑块" icostyle="fa fa-dashboard">
+      <siteMapNode controller="Slider" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Slider" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Slider" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Slider" action="EditTemplate" title="Edit Template" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Slider" action="ColorPicker" title="Color picker" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Slider" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="Splitter" description ="分割条" icostyle="fa fa-bookmark">
+      <siteMapNode controller="Splitter" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Splitter" action="Orientation" title="Orientation" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Splitter" action="AjaxLoading" title="Load on Demand of Content" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Splitter" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Splitter" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Splitter" action="NestingComponents" title="Nesting Components" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Splitter" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="TabStrip" description ="选项卡" icostyle="fa fa-list-ol">
+      <siteMapNode controller="TabStrip" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TabStrip" action="SitemapBinding" title="SiteMap Binding" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TabStrip" action="DataBindingToModel" title="Binding to Model" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TabStrip" action="AjaxLoading" title="Load on Demand of Content" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TabStrip" action="AnimationEffects" title="Animation Effects" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TabStrip" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TabStrip" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TabStrip" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TabStrip" action="RtlSupport" title="RTL support" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TabStrip" action="Sprites" title="Sprites" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="TreeView" description ="导航树" icostyle="fa fa-list-ul">
+      <siteMapNode controller="TreeView" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="DragandDrop" title="Drag &amp; Drop" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="CheckBoxSupport" title="CheckBox Support" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="SitemapBinding" title="SiteMap Binding" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="DataBindingToModel" title="Binding to Model" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="Templates" title="Templates" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="AjaxLoading" title="Load on Demand" />
+      <siteMapNode controller="TreeView" action="AnimationEffects" title="Animation Effects" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="ClientSideBinding" title="Client-side Binding" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="RtlSupport" title="RTL support" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="TreeView" action="Sprites" title="Sprites" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="Window" description ="窗口" icostyle="fa fa-windows">
+      <siteMapNode controller="Window" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Window" action="AnimationEffects" title="Animation Effects" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Window" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Window" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Window" action="LoadingExternalPage" title="Loading External Page" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Window" action="Accessibility" title="Accessibility" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Window" action="RtlSupport" title="RTL support" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Window" action="PopupForm" title="Form in popup window" icostyle="fa fa-angle-right"/>
+    </siteMapNode>
+    <siteMapNode title="Upload" description ="上传文件" icostyle="fa fa-cloud-upload">
+      <siteMapNode controller="Upload" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Upload" action="SyncUpload" title="Synchronous Upload" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Upload" action="ClientSideEvents" title="Client-side Events" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Upload" action="ClientSideApi" title="Client-side API" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Upload" action="RtlSupport" title="RTL Support" icostyle="fa fa-angle-right" />
+    </siteMapNode>
+    <siteMapNode title="Maps" description ="地图" icostyle="fa fa-map-marker">
+      <siteMapNode controller="Maps" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Maps" action="BasicMaps" title="Basic Maps" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Maps" action="Vector" title="Vector Maps" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Maps" action="Full" title="Full Maps" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Maps" action="RtlSupport" title="RTL Support" icostyle="fa fa-angle-right" />
+    </siteMapNode>
+    <siteMapNode title="Pagination" description ="分页" icostyle="fa fa-flag">
+      <siteMapNode controller="Pagination" action="FirstLook" title="First Look" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Pagination" action="Basic" title="Basic style" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Pagination" action="Options" title="Options setting" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Pagination" action="DataBinding" title="Data Binding" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Pagination" action="AjaxDataBinding" title="Ajax Data Binding" icostyle="fa fa-angle-right"/>
+      <siteMapNode controller="Pagination" action="RtlSupport" title="RTL Support" icostyle="fa fa-angle-right" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

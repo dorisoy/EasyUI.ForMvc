@@ -1,0 +1,47 @@
+﻿<p>
+    This example shows how to configure EasyUI ComboBox for ASP.NET MVC to load its
+    data through Ajax requests. Server should return JSON data.
+</p>
+<p>
+    You can bind the combobox to an Action method that will get requested through AJAX,
+    or to an ASMX / WCF web service, using the <strong>DataBinding</strong> method.
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().ComboBox()
+     .Name("ComboBox")
+     <em>.DataBinding(binding => binding.Ajax().Select("_AjaxLoading", "ComboBox"))</em>
+ %&gt;
+</pre>
+<p>
+    You can load whole list of items using the <em>BindTo</em> method
+    or generate it through <em>Items</em> method.
+</p>
+Available settings:
+<ul>
+    <li>
+        Cache:
+        <ul style="padding:0 0 0 2em">
+            <li>
+                Enabled: Last recieved data will be saved and any additional filtration will be done perform on it.
+                <br/>
+                <em>If there are no matches after filtering, combobox will initiate another ajax request.</em>
+            </li>
+            <li>
+                Disabled: ComboBox will perform ajax request on every keystroke.
+            </li>
+        </ul>
+        <pre class="prettyprint" style="padding-bottom:0">
+        &lt;%= Html.EasyUI().ComboBox()
+                .Name("ComboBox")
+                <em>.DataBinding(binding => binding.Ajax().Select("_AjaxLoading", "ComboBox").<strong>Cache(true)</strong>)</em>
+            %&gt;
+        </pre>
+        <p style="padding:0 0 0 2em">
+            <em>AutoComplete component behaves similarly.</em><br />
+            <em>DropDownList will make ajax request only once and cache the recieved data.</em>
+        </p>
+    </li>
+    <li>
+        Delay: The delay in milliseconds which combobox will wait after a keystroke to initiate ajax request.
+    </li>
+</ul>

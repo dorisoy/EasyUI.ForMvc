@@ -1,0 +1,28 @@
+﻿<p>
+This example shows how set the client-side row template of the grid. The row template allows you to customize
+the way the entire row is presented in the grid. Client-side row templates are used in ajax and web service binding.
+</p>
+<p>
+    To set the client-side template use the <code>ClientRowTemplate</code> method. You can use <code>&lt;#= #&gt;</code> to embed databound expressions in a similar
+    way to server side templates.
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid&lt;EditableCustomer&gt;()
+        .Name("Grid")
+        .ClientRowTemplate(grid =&gt; "&lt;div class='employee-details'&gt;" +
+                "&lt;img class='t-widget' src='" + Url.Content("~/Content/Grid/Customers/") +
+                    "&lt;#= CustomerID#&gt;.jpg' alt='&lt;#= ContactName #&gt;' title='&lt;#= ContactName #&gt;' /&gt;" +
+                "&lt;h3 class='t-widget'&gt;&lt;#= ContactName #&gt;&lt;/h3&gt;" +
+                "&lt;dl&gt;" +
+                    "&lt;dt&gt;Name:&lt;/dt&gt;&lt;dd&gt;&lt;#= ContactName #&gt;&lt;/dd&gt;" +
+                    "&lt;dt&gt;Company:&lt;/dt&gt;&lt;dd&gt;&lt;#= CompanyName #&gt;&lt;/dd&gt;" +
+                    "&lt;dt&gt;Country:&lt;/dt&gt;&lt;dd&gt;&lt;#= Country #&gt;&lt;/dd&gt;" +
+                "&lt;/dl&gt;&lt;dl class='t-widget'&gt;" +
+                    "&lt;dt&gt;Address:&lt;/dt&gt;&lt;dd&gt;&lt;#= Address #&gt;&lt;/dd&gt;" +
+                    "&lt;dt&gt;Phone:&lt;/dt&gt;&lt;dd&gt;&lt;#= Phone #&gt;&lt;/dd&gt;" +
+                "&lt;/dl&gt;" +
+            "&lt;div class='commands'&gt;" + grid.EditButton(null) + grid.DeleteButton(null) + "&lt;/div&gt;" +
+            "&lt;/div&gt;"
+        )
+%&gt;
+</pre>

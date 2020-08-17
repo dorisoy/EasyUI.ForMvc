@@ -1,0 +1,23 @@
+﻿
+@(Html.EasyUI().Grid<ClientEditableOrder>()
+        .Name("Grid")
+        .DataKeys(keys =>
+        {
+            keys.Add(o => o.OrderID);
+        })
+        .DataBinding(dataBinding =>
+        {
+            dataBinding.Ajax()
+                .Select("_ForeignKeyColumn", "Grid")
+                .Update("_ForeignKeyColumnUpdateOrder", "Grid");
+        })
+        .Columns(columns =>
+        {
+            columns.Bound(o => o.OrderID).Width(100);
+            columns.ForeignKey(o => o.EmployeeID, (IEnumerable)ViewData["employees"], "ID", "Name").Width(230);
+            columns.Bound(o => o.OrderDate).Width(150);
+            columns.Bound(o => o.Freight).Width(220);
+            columns.Command(commands => commands.Edit()).Width(200);
+        })
+        .Pageable()
+)

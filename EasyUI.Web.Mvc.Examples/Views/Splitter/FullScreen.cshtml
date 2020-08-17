@@ -1,0 +1,132 @@
+﻿
+
+
+
+@*
+	<% Html.EasyUI().HorizontalSplitter()
+            .Name("Splitter")
+            .HtmlAttributes(new {})
+            .Panes(splitter =>
+            {
+                splitter.Pane()
+                    .HtmlAttributes(new {})
+                    .Width("300px") // px/%; anything else?
+                    .Content(() => {%>
+                    <%})
+                    .Scrollable(false);
+
+                splitter.Pane()
+                    .Width("100px")
+                    .MinWidth("20px")
+                    .MinWidth("20px");
+
+                splitter.SplitBar();
+
+                splitter.Pane();
+            })
+            .Render();
+	%>
+*@
+
+500 x 300px splitter:
+<div class="t-widget t-splitter-horizontal" style="width:100%;height:100%">
+    <div class="t-pane t-content t-state-default" style="width:100px">Content</div>
+    <div class="t-splitbar"><div class="t-splitter-handle t-state-default"></div></div>
+    <div class="t-pane t-scrollable t-content t-state-default" style="width:300px">Long content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat consequat nibh, eu commodo nisi porttitor nec. Sed vitae mauris mi, id mollis tortor. Nulla diam neque, euismod a tristique eget, luctus a ligula. Nullam sed ipsum diam, eu auctor dui. Maecenas viverra tellus quis ipsum accumsan at cursus mi semper. Cras sit amet mattis risus. Aliquam sodales ipsum et eros aliquam eget feugiat lacus imperdiet. Fusce facilisis pharetra mi, quis luctus sapien porta at. In vulputate mi quis enim ornare sit amet tempus libero commodo. Proin scelerisque, lorem sed sagittis sodales, neque mauris iaculis massa, in aliquam elit massa id augue. Sed rhoncus bibendum orci a egestas. Suspendisse id nibh et purus placerat vestibulum vitae sit amet nisi. In lectus nisl, pellentesque sed facilisis sit amet, auctor sed tellus. Aenean non lobortis eros. Mauris et velit et ipsum semper elementum. Nulla facilisi. Maecenas et justo felis, ut bibendum quam. Integer massa leo, congue at elementum non, ullamcorper at massa. Donec et lectus dui, vitae pharetra justo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat consequat nibh, eu commodo nisi porttitor nec. Sed vitae mauris mi, id mollis tortor. Nulla diam neque, euismod a tristique eget, luctus a ligula. Nullam sed ipsum diam, eu auctor dui. Maecenas viverra tellus quis ipsum accumsan at cursus mi semper. Cras sit amet mattis risus. Aliquam sodales ipsum et eros aliquam eget feugiat lacus imperdiet. Fusce facilisis pharetra mi, quis luctus sapien porta at. In vulputate mi quis enim ornare sit amet tempus libero commodo. Proin scelerisque, lorem sed sagittis sodales, neque mauris iaculis massa, in aliquam elit massa id augue. Sed rhoncus bibendum orci a egestas. Suspendisse id nibh et purus placerat vestibulum vitae sit amet nisi. In lectus nisl, pellentesque sed facilisis sit amet, auctor sed tellus. Aenean non lobortis eros. Mauris et velit et ipsum semper elementum. Nulla facilisi. Maecenas et justo felis, ut bibendum quam. Integer massa leo, congue at elementum non, ullamcorper at massa. Donec et lectus dui, vitae pharetra justo.</div>
+    <div class="t-pane t-content t-state-default" style="width:100px">More content</div>
+</div>
+
+<script type="text/javascript">
+    var splitter = function(element, options) {
+        $.extend(this, options);
+        this.element = element;
+        var sizingProperty = (this.orientation == 'horizontal' ? 'width' : 'height');
+        this.sizingProperty = sizingProperty;
+
+        var hasFreeSizeContainer = false;
+
+        $(element).find('.t-pane')
+            .addClass('t-content t-state-default')
+            .each($.proxy(function(i, element) {
+                var desiredWidth = element.style[sizingProperty] || '*';
+
+                if (desiredWidth == '*')
+                    hasFreeSizeContainer = true;
+
+                $(element).data(sizingProperty, desiredWidth);
+            }, this));
+
+        this.resize();
+    }
+
+    splitter.prototype = {
+        resize: function() {
+            var totalSpace = this.element[this.sizingProperty == 'width' ? 'offsetWidth' : 'offsetHeight'];
+
+            console.log("totalSpace (" + this.sizingProperty + "): ", totalSpace);
+        }
+    };
+    
+    <% Html.EasyUI().ScriptRegistrar().OnDocumentReady(() =>
+       {%>
+            $('.t-splitter-horizontal').each(function() {
+                new splitter(this, {
+                    orientation: 'horizontal'
+                });
+            });
+       <%});
+    %>
+</script>
+
+
+
+
+@section HeadContent {
+
+    <style type="text/css">
+        .t-splitter-horizontal,
+        .t-pane 
+        {
+            overflow: visible; /* toggled by js */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+            display: inline-block;
+            *display: inline;
+            zoom: 1;
+        }
+        
+        .t-splitter-horizontal
+        {
+            border: 0;
+            white-space: nowrap;
+        }
+        
+        .t-scrollable
+        {
+            overflow: auto;
+        }
+        
+        .t-splitter-horizontal .t-pane
+        {
+            float: left;
+            display: inline;
+            height: 100%;
+            border-width: 1px;
+            border-style: solid;
+            white-space: normal;
+        }
+        
+        .t-splitter-horizontal .t-splitbar
+        {
+            height: 100%;
+            width: 0; /* set through javascript */
+            float: left;
+            background: red;
+            cursor: w-resize;
+        }
+    </style>
+
+}
+

@@ -1,0 +1,33 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>QUnit test page</title>
+    <%= Html.EasyUI().StyleSheetRegistrar().DefaultGroup(g => g
+            .Add("easyui.common.css")
+            .Add("easyui.forest.css")
+            .Add("qunit.css")) %>
+
+</head>
+<body>
+    <h1 id="qunit-header">TEST PAGE</h1>
+    <h2 id="qunit-banner"></h2>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            
+    <% Html.EasyUI().ScriptRegistrar()
+            .DefaultGroup(defaultGroup => defaultGroup
+               .Add("jquery-1.6.4.min.js")
+                .Add("qunit.js")
+                .Add("qunit-runner.js")
+                .Add("jquery.mockjax.js"))
+                .OnDocumentReady(() => {%>if ($.easyui) window.$t = $.easyui;<%})
+                .Render();
+    %>
+
+    <asp:ContentPlaceHolder ID="TestContent" runat="server" />
+</body>
+</html>

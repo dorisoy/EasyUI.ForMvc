@@ -1,0 +1,46 @@
+﻿<p>
+    This example demonstrates how to use the client detail template in order to achieve three level hierarchy:
+    Employees -> Orders -> OrderDetails with ajax binding.
+</p>
+<p>
+    Important notes:
+</p>
+<ol>
+    <li>Use the <code>ClientTemplate</code> method to set the client template (used only for ajax and web service binding scenarios).</li>
+    <li>Make sure the <code>Name</code> of any UI component defined in the template is unique. A property of the bound object can be used to ensure
+        such uniqueness by utilizing client binding expressions: <code>Name("Orders_<#= EmployeeID #>")</code>.
+    </li>
+    <li>
+        Calling the <code>ToHtmlString</code> method is required in order to output the contents of any UI components defined in the client detail template.
+    </li>
+    <li>
+        If the master grid is client bound (ajax or web service) so must be the child grids (defined in the client detail template).
+    </li>
+</ol>
+<p>Example:</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid&lt;EmployeeViewModel&gt;()
+    .Name("Employees")
+    .DetailView(details =&gt; <em>details.ClientTemplate</em>(
+            Html.EasyUI().Grid&lt;OrderViewModel&gt;()
+                <em>.Name("Orders_&lt;#= EmployeeID #&gt;")</em>
+                .DetailView(ordersDetailView =&gt; <em>ordersDetailView.ClientTemplate</em>(
+                    Html.EasyUI().Grid&lt;OrderDetailsViewModel&gt;()
+                        <em>.Name("OrderDetails_&lt;#= OrderID #&gt;")</em>
+                        .DataBinding(dataBinding =&gt; dataBinding.Ajax()
+                            .Select("_OrderDetailsForOrderHierarchyAjax", "Grid", new { orderID = "&lt;#= OrderID #&gt;" }))
+                        .Pageable()
+                        .Sortable()
+                        <em>.ToHtmlString()</em>
+                 ))
+                .DataBinding(dataBinding =&gt; dataBinding.Ajax()
+                    .Select("_OrdersForEmployeeHierarchyAjax", "Grid", new { employeeID = "&lt;#= EmployeeID #&gt;" }))
+                .Pageable()
+                .Sortable()
+                <em>.ToHtmlString()</em>
+    ))
+    .DataBinding(dataBinding =&gt; dataBinding.Ajax().Select("_EmployeesHierarchyAjax", "Grid"))
+    .Pageable(paging =&gt; paging.PageSize(5))
+    .Scrollable(scrolling =&gt; scrolling.Height(580))
+%&gt;
+</pre>

@@ -1,0 +1,34 @@
+﻿<p>
+This example demonstrates the keyboard navigation of EasyUI Grid for ASP.NET MVC.
+</p>
+<div>
+    Keyboard Shortcuts:
+    <ul>
+        <li><kbd>Tab</kbd> (standard mode) - Move focus between grid, links and form controls.</li>
+        <li><kbd>Tab</kbd> (actionable mode) - Move focus.</li>
+        <li><kbd>Enter</kbd> (standard mode) - Edit current row.</li>
+        <li><kbd>Enter</kbd> (actionable mode) - Update the contents of current row.</li>
+        <li><kbd>Spacebar</kbd> - Selects current row.</li>
+        <li><kbd>Esc</kbd> (actionable mode) - Move to standard mode, do not update the contents of the grid.</li>
+        <li><kbd>Up Arrow</kbd> - Move focus to grid cell in previous row.</li>
+        <li><kbd>Down Arrow</kbd> - Move focus to grid cell in next row.</li>
+        <li><kbd>Left Arrow</kbd> - Move focus one grid cell to the left.</li>
+        <li><kbd>Right Arrow</kbd> - Move focus one grid cell to the right.</li>
+        <li><kbd>Page Up</kbd> - Page to previous grid page.</li>
+        <li><kbd>Page Down</kbd> - Page to next grid page.</li>
+    </ul>
+</div>
+<p>
+To enable client operation mode you should use the <code>KeyboardNavigation</code> method: 
+</p>
+<pre class="prettyprint">
+     Html.EasyUI().Grid(Model)
+        .Name("Orders")
+        .DataBinding(dataBinding =&gt; dataBinding
+             .Ajax()
+             .Select("Select", "Home")
+        )
+        .Pageable()
+        .Sortable()
+        <b>.KeyboardNavigation() // enables keyboard navigation</b>
+</pre>

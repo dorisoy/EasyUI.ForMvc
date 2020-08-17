@@ -1,0 +1,49 @@
+﻿<p> 
+    This example shows how to configure the grid columns from the controller.
+</p>
+<ol>
+    <li>
+        Create an array of <code>GridColumnSettings</code> objects:
+<pre class="prettyprint">
+var columns = new[] 
+{
+    new GridColumnSettings
+    {
+        Member = "ProductName",
+        Width = "130px"
+    },
+    new GridColumnSettings
+    {
+        Member = "UnitPrice",
+        Width = "130px",
+        Format = "{0:c}",
+    },
+    new GridCommandColumnSettings
+    {
+        Commands = 
+        {
+            new GridEditActionCommand(),
+            new GridDeleteActionCommand()
+        },
+        Width = "200px",
+        Title = "Commands"
+    }
+};
+</pre>
+    </li>
+    <li>
+        Store it in ViewData
+<pre class="prettyprint">
+ViewData["columns"] = columns;
+</pre>
+   </li>
+    <li>
+        Configure the grid using the <code>LoadSettings</code> method
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        <em>.Columns(columns => columns.LoadSettings((IEnumerable&lt;GridColumnSettings&lt;EditableProduct&gt;&gt;)ViewData["Columns"]))</em>
+%&gt;
+</pre>    
+    </li>
+</ol>

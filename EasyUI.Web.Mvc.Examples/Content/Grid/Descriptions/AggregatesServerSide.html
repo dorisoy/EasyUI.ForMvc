@@ -1,0 +1,65 @@
+﻿<p>
+    This example shows how to use aggregates in EasyUI Grid for ASP.NET MVC which is bound server side.
+</p>
+<p>
+    The following aggregates are supported:
+</p>
+<ul>
+    <li>Average</li>
+    <li>Count</li>
+    <li>Min</li>
+    <li>Max</li>
+    <li>Sum</li>
+</ul>
+<p>
+    To specify the aggregates for a column use the <code>Aggregates</code> method:
+</p>
+<pre class="prettyprint">
+columns.Bound(o =&gt; o.UnitsInStock)
+        <em>.Aggregate(aggregates =&gt; aggregates.Count().Min().Max())</em>
+</pre>
+<p>
+    Aggregate results can be displayed in three locations:
+</p>
+<ol>
+    <li>
+        In the group header:
+<pre class="prettyprint">
+columns.Bound(o =&gt; o.UnitsInStock)
+        .Aggregate(aggregates =&gt; aggregates.Count())
+        <em>.GroupHeaderTemplate(result =&gt;</em>
+        {
+            %&gt;
+                &lt;%= result.Title%&gt;: &lt;%= result.Key %&gt; (Count: &lt;%= result.Count %&gt;)
+            &lt;%
+        });
+</pre>
+    </li>
+    <li>
+        In the group footer:
+<pre class="prettyprint">
+columns.Bound(o =&gt; o.UnitsOnOrder)
+        .Aggregate(aggregates =&gt; aggregates.Average())
+        <em>.GroupFooterTemplate(result =&gt;</em>
+        {
+            %&gt;
+                Average: &lt;%= result.Average%&gt;
+            &lt;%
+        });
+</pre>
+    </li>
+    <li>
+        In the grid footer:
+<pre class="prettyprint">
+columns.Bound(o =&gt; o.UnitsInStock)
+        .Aggregate(aggregates =&gt; aggregates.Count().Min().Max())
+        <em>.FooterTemplate(result =&gt;</em>
+        {
+            %&gt;
+                &lt;div&gt;Min: &lt;%= result.Min%&gt;&lt;/div&gt;
+                &lt;div&gt;Max: &lt;%= result.Max%&gt;&lt;/div&gt;
+            &lt;%
+        })
+</pre>
+    </li>
+</ol>

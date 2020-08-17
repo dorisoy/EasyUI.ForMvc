@@ -1,0 +1,26 @@
+﻿<p>
+    This example demonstrates how to use custom header and footer templates in EasyUI Grid for ASP.NET
+    MVC. The templates can be declared through the column's HeaderTemplate and FooterTemplate methods respectively.
+</p>
+<p>
+    To define a custom header and footer templates by using the following code
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        .Columns(columns =&gt;
+        {     
+            columns.Bound(p => p.ProductID)
+                   <strong>.HeaderTemplate(() =>
+                      {%&gt;
+                      &lt;input id="chkAll" type="checkbox" title="check all records"/&gt;
+                      &lt;%})</strong>;
+            columns.Bound(p =&gt; p.UnitPrice)
+                    <strong>.FooterTemplate(() =&gt;
+                        {%&gt;
+                        Total:&lt;%= string.Format("{0:c}", Model.TotalPrice)%&gt;
+                        &lt;%})</strong>;
+        }
+        .Render();            
+%&gt;
+</pre>

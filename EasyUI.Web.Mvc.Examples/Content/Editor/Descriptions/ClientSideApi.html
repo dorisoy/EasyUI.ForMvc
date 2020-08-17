@@ -1,0 +1,52 @@
+﻿<p>
+    This example shows how to use the client-side API of EasyUI Editor for ASP.NET MVC.
+</p>
+<p>
+    To use the client-side API you should first retrieve the Editor client-side object.
+    The following code snippet shows how to do this:
+</p>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot;&gt;
+function getEditor(){
+    //"Editor" is the value specified by the Name() method.
+    var editor = $("#Editor").data("tEditor");
+    return editor;
+}
+&lt;/script&gt;
+</pre>
+<p>
+    Available client-side methods:
+</p>
+<ul>
+    <li>
+        You can create a <strong><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html">Range object</a></strong>  with <strong>createRange()</strong> method.
+<pre class="prettyprint">
+function selectAll() {
+    var editor = getEditor(); // Create Editor object.
+
+    range = editor.createRange();
+    ...
+}
+</pre>
+    </li>
+    <li>
+        You can select a <em>Range object</em> by using <strong>selectRange(...)</strong> method. This method accepts a <em>Range object</em>.
+<pre class="prettyprint">
+function selectAll() {
+    var editor = getEditor(); // Create Editor object.
+    ...
+    editor.selectRange(range);
+}
+</pre>
+    </li>
+    <li>
+        You can modify selected area with <strong>exec(...)</strong> method with exec <strong><a href="http://www.easyui.com/help/aspnet-mvc/easyui-ui-components-editor-client-api-and-events.html#exec">commands</a></strong>.
+<pre class="prettyprint">
+function textBold() {
+    var editor = getEditor(); // Create Editor object.
+    ...
+    editor.exec("bold");
+}
+</pre>
+    </li>
+</ul>

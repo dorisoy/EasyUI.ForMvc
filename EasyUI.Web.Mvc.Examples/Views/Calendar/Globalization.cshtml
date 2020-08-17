@@ -1,0 +1,30 @@
+﻿
+
+@(Html.EasyUI().Calendar()
+        .Name("Calendar")
+        .HtmlAttributes(new { style = "width: 294px;" })
+)
+
+    @Html.Partial("_CulturePicker") 
+
+@{ Html.EasyUI().ScriptRegistrar().Globalization(true); }
+
+
+
+@section HeadContent {
+    <style type="text/css">
+        
+        #Calendar
+        {
+            float: left;
+            margin-bottom: 1.3em;
+        }
+		
+	    .example .configurator
+	    {
+	        float: left;
+	        margin: 0 0 0 10em;
+	        display: inline;
+	    }
+    </style>
+}

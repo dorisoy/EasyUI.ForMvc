@@ -1,0 +1,29 @@
+﻿<p>
+    This example shows how to configure the EasyUI Splitter for ASP.NET MVC to render in horizontal or vertical direction.
+</p>
+<p>
+    Use the <strong>Orientation</strong> method to set the orientation of the splitter. The method
+    accepts the <code>SplitterOrientation</code> enumeration:
+</p>
+<ul>
+    <li>
+        <strong>Horizontal orientation</strong> : Use the <code>SplitterOrientation.Horizontal</code> option
+        <pre class="prettyprint">
+&lt;%= Html.EasyUI().Splitter()
+        .Name("Splitter")
+        <em>.Orientation(SplitterOrientation.Horizontal)</em>
+        ...
+%&gt;
+        </pre>
+    </li>
+    <li>
+        <strong>Vertical orientation</strong> : Use the <code>SplitterOrientation.Vertical</code> option
+        <pre class="prettyprint">
+&lt;%= Html.EasyUI().Splitter()
+        .Name("Splitter")
+        <em>.Orientation(SplitterOrientation.Vertical)</em>
+        ...
+%&gt;
+        </pre>
+    </li>
+</ul>

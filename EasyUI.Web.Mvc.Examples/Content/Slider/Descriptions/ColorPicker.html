@@ -1,0 +1,33 @@
+﻿<p>
+    This example shows how to combine three EasyUI Slider UI components to create a simple RGB colorpicker.
+</p>
+<p>
+    <strong>OnSlide</strong> and <strong>OnChange</strong> client event of the three sliders is 
+    wired to the <em>onRedSliderEvent, onGreenSliderEvent and onBlueSliderEvent</em> event handlers. 
+    <pre class="prettyprint">
+        var red = 204,
+            green = 255,
+            blue = 50;
+        
+        function onRedSliderEvent (e) {
+            red = e.value;
+            changeBackgroundColor(red, green, blue)
+        }
+
+        function onGreenSliderEvent (e) {
+            green = e.value;
+            changeBackgroundColor(red, green, blue)
+        }
+
+        function onBlueSliderEvent (e) {
+            blue = e.value;
+            changeBackgroundColor(red, green, blue)
+        }
+
+        function changeBackgroundColor(red, green, blue) {
+            var color = "rgb(" + red + ", "  + green + ", " + blue + ")";
+            $("#colorBox").css("background-color", color);
+        }
+    </pre>
+    In it, you can see how the values are retrieved and the background-color of the DIV element is set.
+</p>

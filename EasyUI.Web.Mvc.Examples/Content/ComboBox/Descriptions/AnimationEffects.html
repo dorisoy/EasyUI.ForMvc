@@ -1,0 +1,27 @@
+﻿<p>
+    This example shows how to configure EasyUI ComboBox for ASP.NET MVC to animate list of items. The supported animations are slide and toggle.
+</p>
+<ul>
+    <li>
+        To configure the slide animation use the <strong>Slide</strong> method.
+    </li>
+    <li>
+        To turn off the expand animation you can use the <strong>Toggle</strong> method.
+    </li>
+</ul>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().ComboBox()
+        .Name("ComboBox")
+        .Effects(fx => fx.Slide()
+                         .OpenDuration(200)
+                         .CloseDuration(300);
+                            
+        )
+%&gt;
+</pre>
+<p>
+    Use the configurator to experiment with the animation settings.
+</p>
+<p>
+    Autocomplete and DropDownList components support same animations and can be configured like ComboBox component.
+</p>

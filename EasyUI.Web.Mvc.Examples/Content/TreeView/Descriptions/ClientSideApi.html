@@ -1,0 +1,33 @@
+﻿<p>
+    This example shows how to use the client-side API of EasyUI TreeView for ASP.NET
+    MVC.
+</p>
+<p>
+    To use the client-side API you should first retrieve the treeview client-side object.
+    The following code snippet shows how to do this:
+</p>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot;&gt;
+function getTreeView(){
+    //"TreeView" is the value specified by the Name() method.
+    var treeview = $("#TreeView").data("tTreeView");
+    return treeview;
+}
+&lt;/script&gt;
+</pre>
+<p>
+    The available client-side methods are:
+</p>
+<ul>
+    <li><code>treeview.<strong>expand</strong>(<em>node</em>)</code> - expands a treeview node.</li>
+    <li><code>treeview.<strong>collapse</strong>(<em>node</em>)</code> - collapses a treeview node.</li>
+    <li><code>treeview.<strong>enable</strong>(<em>node</em>)</code> - enables a treeview node.</li>
+    <li><code>treeview.<strong>disable</strong>(<em>node</em>)</code> - disables a treeview node.</li>
+
+    <li><code>treeview.<strong>getItemText</strong>(<em>node</em>)</code> - gets the text of a treeview node.</li>
+    <li><code>treeview.<strong>getItemValue</strong>(<em>node</em>)</code> - gets the value of a treeview node. If the value is not set, returns the node text.</li>
+
+    <li><code>treeview.<strong>nodeCheck</strong>(<em>node</em>, <em>isChecked</em>)</code> - checks/unchecks a treeview node that has a checkbox, depending on the value of <code><em>isChecked</em></code>.</li></ul>
+<p>
+    All of the above methods accept <em>node</em> as either a <strong>DOM element</strong>, <strong>jQuery selector</strong> or a <strong>jQuery object</strong>.
+</p>

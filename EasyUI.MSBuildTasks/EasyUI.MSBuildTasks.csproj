@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39A7EE53-1908-45DA-93E1-B3C53F4429E9}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>EasyUI.MSBuildTasks</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="Microsoft.Build.Utilities" />
+    <Reference Include="Microsoft.Build.Tasks" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="System.Xml" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Helpers\DateAndFrameworkDependentVersion.cs" />
+    <Compile Include="Now.cs" />
+    <Compile Include="Helpers\InstallerDateDependentVersion.cs" />
+    <Compile Include="GetDuration.cs" />
+    <Compile Include="AsyncExec.cs" />
+    <Compile Include="Web\ExtractResources.cs" />
+    <Compile Include="Helpers\AssemblyInfoParser.cs" />
+    <Compile Include="Replace.cs" />
+    <Compile Include="WebUITestStudio\GetInstallerVersionByBase.cs" />
+    <Compile Include="MultiXmlUpdate.cs" />
+    <Compile Include="Helpers\DateDependentVersion.cs" />
+    <Compile Include="AddRegKey.cs" />
+    <Compile Include="MergeFiles.cs" />
+    <Compile Include="Web\ExtractCssResources.cs" />
+    <Compile Include="GenerateVersionDependentSuffix.cs" />
+    <Compile Include="AddRegValue.cs" />
+    <Compile Include="ReadFromFile.cs" />
+    <Compile Include="GetRelativeDate.cs" />
+    <Compile Include="WebUITestStudio\GetAssemblyVersionByBase.cs" />
+    <Compile Include="Helpers\NumberParser.cs" />
+    <Compile Include="GetFullPath.cs" />
+    <Compile Include="UpdateAssemblyVersions.cs" />
+    <Compile Include="Helpers\RegistryHelper.cs" />
+    <Compile Include="WebUITestStudio\GetInstallerFileVersionByBase.cs" />
+    <Compile Include="GetAssemblyFullName.cs" />
+    <Compile Include="Web\GetInstallerVersion.cs" />
+    <Compile Include="FormatDateTime.cs" />
+    <Compile Include="Helpers\VersionFormatter.cs" />
+    <Compile Include="Web\GetAssemblyVersionSuffix.cs" />
+  </ItemGroup>
+</Project>

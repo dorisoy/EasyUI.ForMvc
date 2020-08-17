@@ -1,0 +1,23 @@
+﻿<p>
+This example demonstrates the operation modes of EasyUI Grid for ASP.NET MVC Ajax binding.
+</p>
+<p>
+By default EasyUI Grid for ASP.NET MVC will request data from the server every time the user changes the page, filters the grid, sorts or groups (<b>server operation mode</b>). 
+When, <b>client operation mode</b> is enabled the grid will make only one request to the server and retrieve all data. After that all operations (paging, sorting, filtering and grouping) will be performed client-side. 
+This would improve performance and will eliminate the need to hit the server for data.
+</p>
+<p>
+To enable client operation mode you should use the <code>OperationMode</code> method: 
+</p>
+
+<pre class="prettyprint">
+     Html.EasyUI().Grid(Model)
+        .Name("Orders")
+        .DataBinding(dataBinding =&gt; dataBinding
+             .Ajax()
+                   <b>.OperationMode(GridOperationMode.Client) // &lt;-- set the operation mode</b>
+                   .Select("Select", "Home")
+        )
+        .Pageable()
+        .Sortable()
+</pre>

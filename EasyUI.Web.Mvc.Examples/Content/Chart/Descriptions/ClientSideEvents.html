@@ -1,0 +1,81 @@
+﻿<p>
+    This example shows the client-side events supported by EasyUI Chart for ASP.NET MVC.
+</p>
+<p>
+    You can attach an event handler using either of these options:
+</p>
+
+<ol>
+    <li>
+        Specifiy the JavaScript event handler name:
+        <pre class="prettyprint">
+Html.EasyUI().Chart(Model)
+    .Name("chart")
+    .Series(series => {
+        series.Bar(s => s.RepSales).Name("Representative Sales");
+        series.Bar(s => s.TotalSales).Name("Total Sales");
+    })
+    .ClientEvents(events => events
+        <em>.OnLoad("onLoad")</em>
+    )
+        </pre>
+    </li>
+    <li>
+        Declare the event handler inline (WebForms syntax):
+        <pre class="prettyprint">
+&lt;%= Html.EasyUI().Chart(Model)
+    .Name("chart")
+    .Series(series => {
+        series.Bar(s => s.RepSales).Name("Representative Sales");
+        series.Bar(s => s.TotalSales).Name("Total Sales");
+    })
+    .ClientEvents(events => events
+       <em>.OnLoad(() => 
+       {
+        %&gt;
+         function(e) {
+             // Perform required actions here.
+         }
+        &lt;%
+       }</em>
+    )
+%&gt;
+        </pre>
+    </li>
+    <li>
+        Declare the event handler inline (Razor syntax):
+        <pre class="prettyprint">
+@(Html.EasyUI().Chart(Model)
+    .Name("chart")
+    .Series(series => {
+        series.Bar(s => s.RepSales).Name("Representative Sales");
+        series.Bar(s => s.TotalSales).Name("Total Sales");
+    })
+    .ClientEvents(events => events
+        <em>.OnLoad(
+        @&lt;text&gt;
+            function(e) {
+                // Perform required actions here.
+            }
+        &lt;/text&gt;)</em>
+    )
+)
+        </pre>
+    </li>
+</ol>
+
+<p>
+    The chart has the following events:
+</p>
+<ul>
+    <li>
+        <em>OnLoad</em> - raised when the component is initialized
+    </li>
+    <li>
+        <em>OnDataBound</em> - raised when the component has received data via Ajax binding
+                               and is about to render it.
+    </li>
+    <li>
+        <em>OnSeriesClick</em> - raised when the user clicks a data series point
+    </li>
+</ul>

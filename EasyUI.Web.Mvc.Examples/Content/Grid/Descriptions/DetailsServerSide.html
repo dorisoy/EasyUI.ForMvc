@@ -1,0 +1,73 @@
+﻿<p>
+    This example shows how to use the server detail template - the detail template used in server binding scenarios.
+</p>
+<p>
+    Important notes:
+</p>
+<ol>
+    <li>Use the <code>Template</code> method to set the server template (used only for server binding scenarios).</li>
+    <li>Make sure the <code>Name</code> of any UI component defined in the template is unique. A property of the bound object can be used to ensure
+        such uniqueness: <code>Name("TabStrip_" + e.EmployeeID)</code>.
+    </li>
+    <li>
+        Calling the <code>Render</code> method is required in order to output the contents of any UI components defined in the server detail template.
+    </li>
+</ol>    
+<p>
+Example:
+</p>
+<pre class="prettyprint">
+&lt;% Html.EasyUI().Grid(Model)
+    .Name("Employees")
+    .DetailView(detailView =&gt; <em>detailView.Template</em>(e =&gt;
+    {
+        %&gt;
+            &lt;% Html.EasyUI().TabStrip()
+                <em>.Name("TabStrip_" + e.EmployeeID)</em>
+                .SelectedIndex(0)
+                .Items(items =&gt;
+                {
+                    items.Add().Text("Orders").Content(() =&gt;
+                    {
+                        %&gt;
+                            &lt;%= Html.EasyUI().Grid(e.Orders)
+                                   <em>.Name("Orders_" + e.EmployeeID)</em>
+                                   .Pageable()
+                                   .Sortable()
+                            %&gt;
+                        &lt;%
+                    });
+                    items.Add().Text("Contact Information").Content(() =&gt;
+                    {
+                        %&gt;
+                            &lt;div class="employee-details"&gt;
+                                &lt;ul&gt;
+                                    &lt;li&gt;
+                                        &lt;label&gt;Birth Date:&lt;/label&gt;&lt;%= e.BirthDate.Value.ToString("d") %&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;label&gt;Country:&lt;/label&gt;&lt;%= e.Country %&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;label&gt;City:&lt;/label&gt;&lt;%= e.City %&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;label&gt;Address:&lt;/label&gt;&lt;%= e.Address %&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;label&gt;Home Phone:&lt;/label&gt;&lt;%= e.HomePhone %&gt;
+                                    &lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/div&gt;
+                        &lt;%
+                    });                                                       
+                })
+                <em>.Render();</em>
+             %&gt;
+        &lt;%    
+    }))
+    .Pageable(paging =&gt; paging.PageSize(5))
+    .Sortable()
+    .Render();
+%&gt;
+</pre>

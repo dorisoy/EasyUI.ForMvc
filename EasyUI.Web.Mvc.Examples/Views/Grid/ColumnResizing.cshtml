@@ -1,0 +1,55 @@
+﻿@model IEnumerable<OrderDto>
+
+
+
+@{
+    var config = (IDictionary<string, int>)ViewData["config"];
+}    
+@{ Html.BeginForm("columnresizing", "grid"); }    
+<p>
+    @{ 
+       int i = 0;
+       foreach (var setting in config)
+       {
+           // Create a hiden for the key and value of each item in the dictonary
+           
+            @Html.Hidden("config[" + i + "].key", setting.Key) 
+            @Html.Hidden("config[" + i + "].value", setting.Value) 
+           
+           i++;
+       }
+    }
+    <button class="t-button t-state-default" type="submit">Save Column Widths</button>
+</p>
+@{ Html.EndForm(); }
+
+@(Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        .TableHtmlAttributes(new { style = "width:" + (config["GridWidth"] > 0 ? config["GridWidth"] + "px" : "100%") })
+        .Columns(columns =>
+        {
+            columns.Bound(o => o.OrderID).Width(config["OrderIDWidth"]);
+            columns.Bound(o => o.ContactName).Width(config["ContactNameWidth"]);
+            columns.Bound(o => o.ShipAddress).Width(config["ShipAddressWidth"]);
+            columns.Bound(o => o.OrderDate).Format("{0:MM/dd/yyyy}").Width(config["OrderDateWidth"]);
+        })
+        .Scrollable()
+        .Resizable(resizing => resizing.Columns(true))
+        .Sortable()
+        .Pageable()
+        .Filterable()
+        .ClientEvents(events => events.OnColumnResize("onResize"))
+        .DataBinding(dataBinding => dataBinding.Ajax().Select("_ColumnResizing", "Grid"))
+)
+<script type="text/javascript">
+
+    function onResize(e) {
+        // update the hidden values which will be posted as IDictionary<string,int>
+        var grid = $('#Grid').data('tGrid');
+        $('#config_0__value').val(grid.$tbody.outerWidth());
+        var index = $.inArray(e.column, grid.columns) + 1;
+        $('#config_' + index + '__value').val(e.newWidth);
+    }
+</script>
+
+

@@ -1,0 +1,64 @@
+﻿<p>
+    This example shows the client-side events supported by EasyUI ComboBox for ASP.NET
+    MVC.
+</p>
+<p>
+    The combobox has the following events:
+</p>
+<ul>
+    <li><strong>OnLoad</strong> - raised when the component is initialized</li>
+    <li><strong>OnOpen <span class="cancellable">(cancellable)</span></strong> - raised
+        when a suggestion list is opened</li>
+    <li><strong>OnClose <span class="cancellable">(cancellable)</span></strong> - raised
+        when a suggestion list is closed</li>
+    <li><strong>OnChange</strong> - raised
+        when the selected value is changed.</li>
+    <li><strong>OnDataBinding <span class="cancellable">(cancellable)</span></strong> -
+        raised a request for data has been made (load on demand)</li>
+    <li><strong>OnDataBound</strong> - raised a request for data has finished</li>
+    <li><strong>OnError</strong> - raised if an error occurs while request (load on demand) for data is made.</li>
+</ul>
+<p>
+    <strong>AutoComplete and DropDownList support same list of client events.</strong>
+</p>
+<p>
+    You can subscribe to each of the events in the following ways:</p>
+<ul>
+    <li>With a pre-defined javascript function
+        <pre class="prettyprint">
+&lt;%= Html.EasyUI().ComboBox()
+        .Name("ComboBox")
+        .ClientEvents(events => events
+            <em>.OnChange("onChange")</em>
+        )
+%&gt;
+
+&lt;script type="text/javascript"&gt;
+    function onChange(e) {
+        // your code
+    }
+&lt;/script&gt;
+</pre>
+    </li>
+    <li>With an inline function, serialized from the server
+        <pre class="prettyprint">
+&lt;% Html.EasyUI().ComboBox()
+       .Name("ComboBox")
+       .ClientEvents(events => events
+       <em>.onChange(() => {%&gt; function(e) { // your code } &lt;%})</em>
+       .Render();
+%&gt;
+</pre>
+    </li>
+    <li>Purely client-side event registration
+        <pre class="prettyprint">
+&lt;%= Html.EasyUI().ComboBox().Name("ComboBox") %&gt;
+
+&lt;script type="text/javascript"&gt;
+    $(document).ready(function() {
+        <em>$('#ComboBox').bind('valueChange', function(e) { // your code });</em>
+    });
+&lt;/script&gt;
+</pre>
+    </li>
+</ul>

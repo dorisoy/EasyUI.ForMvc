@@ -1,0 +1,52 @@
+﻿<p>
+    This example shows the client-side events supported by EasyUI Editor for ASP.NET MVC.
+</p>
+<p>
+    The Editor has the following events:
+</p>
+<ul>
+    <li><strong>OnLoad</strong> - raised when the component is initialized</li>
+    <li><strong>OnChange</strong> - raised
+        when the text is changed and editable area lost focus </li>
+    <li><strong>OnExecute</strong> - raised
+        when a command is executed</li>
+    <li><strong>OnPaste</strong> - raised
+        when the user pastes content</li>
+    <li><strong>OnSelectionChange</strong> - raised
+        when text is selected or editable area is focused</li>
+</ul>
+
+<p>You can subscribe to each of the events in the following ways:</p>
+<ul>
+    <li>With a pre-defined javascript function
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Editor()
+        .Name("Editor")
+        .ClientEvents(events => events
+            <em>.OnLoad("onLoad")</em>
+        )
+%&gt;
+
+&lt;script type="text/javascript"&gt;
+    function onLoad(e) {
+        // your code
+    }
+&lt;/script&gt;
+</pre>
+    </li>
+    <li>With an inline function, serialized from the server
+<pre class="prettyprint">
+&lt;% Html.EasyUI().Editor()
+       .Name("Editor")
+       .ClientEvents(events => events
+       <em>.OnLoad(() => 
+       {%&gt;
+            function(e) {
+                // your code
+            }
+       &lt;%})</em>
+       .Render();
+%&gt;
+</pre>
+    </li>
+</ul>

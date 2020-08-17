@@ -1,0 +1,27 @@
+﻿<p>
+    This example shows how to use EasyUI Grid for ASP.NET MVC foreign key column to
+    show related data. 
+</p>
+<div style="text-align:center" >
+    <img src="/Content/Common/RelatedData.png"/>
+</div>
+<p>
+    The related data should be provided as either SelectList or IEnumerable:
+</p>
+<pre class="prettyprint">
+  Html.EasyUI().Grid&gt;ClientEditableOrder&gt;()
+           .Name("Grid")                      
+           .Columns(columns =&gt;
+           {
+               columns.Bound(o =&gt; o.OrderID).Width(100);
+               <em>columns.ForeignKey(o =&gt; o.EmployeeID, (IEnumerable)ViewData["employees"],
+                   "ID", "Name")</em>.Width(230);
+               columns.Bound(o =&gt; o.OrderDate).Width(150);
+               columns.Bound(o =&gt; o.Freight).Width(220);               
+           })                      
+</pre>
+<p>
+    When switched to edit mode, by default EasyUI DropDownList for ASP.NET MVC will be shown
+    as column editor. This can be changed by modifing the GridForeignKey editor
+    template.
+</p>

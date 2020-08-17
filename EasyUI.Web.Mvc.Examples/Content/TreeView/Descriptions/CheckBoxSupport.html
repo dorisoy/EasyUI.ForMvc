@@ -1,0 +1,28 @@
+﻿<p>EasyUI TreeView for ASP.NET MVC supports checkbox items, as shown above.</p>
+
+<p>If you want to enable the checkbox rendering, you can do so through the <strong>ShowCheckBox</strong> property</p>
+
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().TreeView()
+         .Name("TreeView1")
+         <em>.ShowCheckBox(true)</em>
+%&gt;
+</pre>
+
+<p>When the form is posted, the checked nodes will be posted to the server in a List&lt;TreeViewItem&gt;:</p>
+
+<pre class="prettyprint">
+[AcceptVerbs(HttpVerbs.Post)]
+public ActionResult ProcessCheckedNodes(List&lt;TreeViewItem&gt; TreeView1_checkedNodes)
+{
+    if (checkedNodes != null)
+    {
+        foreach (TreeViewItem node in checkedNodes)
+        {
+            // process checked node
+        }
+    }
+
+    return View();
+}
+</pre>

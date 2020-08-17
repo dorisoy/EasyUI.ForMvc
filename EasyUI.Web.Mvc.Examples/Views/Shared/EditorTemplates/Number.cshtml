@@ -1,0 +1,8 @@
+@model double
+
+@(Html.EasyUI().NumericTextBox()
+        .Name(ViewData.TemplateInfo.GetFullHtmlFieldName(string.Empty))
+        .InputHtmlAttributes(new { style = "width:100%" })
+        .Value(Model)
+)
+

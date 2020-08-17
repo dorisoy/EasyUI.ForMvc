@@ -1,0 +1,219 @@
+﻿   
+    @{ Html.EasyUI().Editor()
+           .Name("Editor")
+           .Value(@<text> 
+                <p>
+                    <img src="@Url.Content("~/Content/Editor/editor.png")"
+                            alt="Editor for ASP.NET MVC logo"
+                            style="display:block;margin-left:auto;margin-right:auto;" />
+
+                    EasyUI Editor for ASP.NET MVC allows your users to edit HTML in a familiar,
+                    user-friendly way.<br />
+                    In this version, the Editor provides the core HTML editing engine, which includes
+                    basic text formatting, hyperlinks, lists, and image handling.
+                    The extension <strong>outputs identical HTML</strong>
+                    across all major browsers, follows accessibility standards
+                    and provides an extended programming API for content manipulation.
+                </p>
+
+                <p>Features include:</p>
+
+                <ul>
+                    <li>Text formatting & alignment</li>
+                    <li>Bulleted and numbered lists</li>
+                    <li>Hyperlink and image dialogs</li>
+                    <li>Cross-browser support</li>
+                    <li>Identical HTML output across browsers</li>
+                    <li>Gracefully degrades to a <code>textarea</code>
+                              when JavaScript is turned off</li>
+                </ul>
+
+                <p>
+                    Read <a href="http://www.easyui.com/products/aspnet-mvc/editor.aspx">more details</a>
+                    or send us your
+                    <a href="http://www.easyui.com/community/forums/aspnet-mvc.aspx">feedback</a>!
+                </p>
+            </text>).Render();
+    }
+
+    <script type="text/javascript">
+
+        function selectAll() {
+            var editor = $("#Editor").data("tEditor");
+
+            var range = editor.createRange();
+            range.selectNodeContents(editor.body);
+            editor.focus();
+            editor.selectRange(range);
+        }
+
+        function textBold() {
+            var editor = $("#Editor").data("tEditor");
+
+            editor.focus();
+            editor.exec("bold");
+        }
+
+        function textItalic() {
+            var editor = $("#Editor").data("tEditor");
+
+            editor.focus();
+            editor.exec("italic");
+        }
+
+        function textUnderline() {
+            var editor = $("#Editor").data("tEditor");
+
+            editor.focus();
+            editor.exec("underline");
+        }
+
+        function textStrikethrough() {
+            var editor = $("#Editor").data("tEditor");
+
+            editor.focus();
+            editor.exec("strikethrough");
+        }
+
+        function textJustifyLeft() {
+            var editor = $("#Editor").data("tEditor");
+
+            editor.focus();
+            editor.exec("justifyleft");
+        }
+
+        function textJustifyCenter() {
+            var editor = $("#Editor").data("tEditor");
+
+            editor.focus();
+            editor.exec("justifycenter");
+        }
+
+        function textJustifyRight() {
+            var editor = $("#Editor").data("tEditor");
+
+            editor.focus();
+            editor.exec("justifyright");
+        }
+
+        function textJustifyFull() {
+            var editor = $("#Editor").data("tEditor");
+
+            editor.focus();
+            editor.exec("justifyfull");
+        }
+
+        function textForeColor()
+        {
+            var editor = $("#Editor").data("tEditor");
+
+            editor.focus();
+
+            editor.exec("foreColor", { value: $("#TextBoxColor").val() });
+        }
+
+    </script>
+
+    @using ( Html.Configurator("Editor client API")
+                   .Begin() )
+       { 
+
+        <ul class="funtionList">
+            <li>
+                <button class="t-button t-state-default" onclick="selectAll()">
+                    Select All</button>
+            </li>
+            <li>
+                <button class="t-button t-state-default" onclick="textBold()">
+                    Bold</button>
+            </li>
+            <li>
+                <button class="t-button t-state-default" onclick="textItalic()">
+                    Italic</button>
+            </li>
+            <li>
+                <button class="t-button t-state-default" onclick="textUnderline()">
+                    Underline</button>
+            </li>
+            <li>
+                <button class="t-button t-state-default" onclick="textStrikethrough()">
+                    Strikethrough</button>
+            </li>
+        </ul>
+
+        <ul class="funtionList">
+            <li>
+                <button class="t-button t-state-default" onclick="textJustifyLeft()">
+                    Justify left</button>
+            </li>
+            <li>
+                <button class="t-button t-state-default" onclick="textJustifyCenter()">
+                    Justify center</button>
+            </li>
+            <li>
+                <button class="t-button t-state-default" onclick="textJustifyRight()">
+                    Justify right</button>
+            </li>
+            <li>
+                <button class="t-button t-state-default" onclick="textJustifyFull()">
+                    Justify full</button>
+            </li>
+        </ul>
+
+        <ul class="funtionList">
+            <li>
+                <input type="text" id="TextBoxColor" title="" />
+                <button class="t-button t-state-default" onclick="textForeColor()">
+                        Change Fore Color</button>
+            </li>
+        </ul>
+
+      } 
+
+    <h3>Generated HTML:</h3>
+
+    <button onclick="$('#generated-markup').val($('#Editor').data('tEditor').value());">Get HTML</button>
+    <button onclick="$('#Editor').data('tEditor').value($('#generated-markup').val());" style="float: right;">Set HTML</button><br />
+    <textarea id="generated-markup" rows="10" cols="80" title="generated-markup" style="width:884px;"></textarea>
+
+    @{ Html.EasyUI().ScriptRegistrar().OnDocumentReady(@<text> 
+           
+                window.editor = $('#Editor').data('tEditor');
+
+                $('#Editor').bind('selectionChange', function() {
+                    $('#generated-markup').val(editor.value());
+                });
+           
+        </text>); }
+
+
+
+@section HeadContent {
+
+    
+    <style type="text/css">
+        .funtionList li {
+            margin-left: 2px;
+            padding:.5em;
+            list-style: none;
+            display: inline;
+        }
+        
+        #generated-markup
+        {
+            font: normal 12px Consolas,Courier New,monospace;
+        }
+        
+        .configurator .t-button
+        {
+            margin: 0 0 1em;
+            display: inline-block;
+            *display: inline;
+            zoom: 1;
+            width: auto;
+            min-width: 6em;
+        }
+    </style>
+
+
+}

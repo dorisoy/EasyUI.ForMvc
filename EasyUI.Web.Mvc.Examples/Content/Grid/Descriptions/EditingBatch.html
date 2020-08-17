@@ -1,0 +1,89 @@
+﻿<p>
+This example shows the cell editting mode combined with batch updates. To enter edit mode just click a cell.
+</p>
+<p>
+    To enable cell editing with batch updatesyou need to do the following:
+</p>
+<ol>
+    <li>
+        Set the edit mode to <code>GridEditMode.InCell</code>:
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid&lt;EditableProduct&gt;()
+        .Name("Grid")
+        <em>.Editable(editing =&gt; editing.Mode(GridEditMode.InCell))</em>
+%&gt;
+</pre>
+    </li>
+    <li>
+    Add "Insert" and "Submit changes" commands to the grid toolbar:
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid&lt;EditableProduct&gt;()
+        .Name("Grid")
+        <em>.ToolBar(commands =&gt; {
+            commands.Insert();
+            commands.SubmitChanges();
+        })
+        </em>
+        .Editable(editing =&gt; editing.Mode(GridEditMode.InCell))
+%&gt;
+
+</pre>    
+    </li>
+    <li>
+    Specify an action method which will handle the batch update request (batch updates are <strong>NOT</strong> supported in server binding mode):
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid&lt;EditableProduct&gt;()
+        .Name("Grid")
+        .DataKeys(keys =&gt; 
+        {
+            keys.Add(p =&gt; p.ProductID);
+        })
+        .ToolBar(commands =&gt; {
+            commands.Insert();
+            commands.SubmitChanges();
+        })
+        .DataBinding(dataBinding =&gt;
+            dataBinding.Ajax()
+                .Select("_SelectBatchEditing", "Grid")
+                <em>.Update("_SaveBatchEditing", "Grid")</em>
+        )
+        .Editable(editing =&gt; editing.Mode(GridEditMode.InCell))
+%&gt;
+</pre>
+    </li>
+    <li>
+        Implement the batch update in the specified controller method:
+<pre class="prettyprint">
+public ActionResult _SaveBatchEditing([Bind(Prefix = "inserted")]IEnumerable&lt;EditableProduct&gt; insertedProducts,
+            [Bind(Prefix = "updated")]IEnumerable&lt;EditableProduct&gt; updatedProducts, 
+            [Bind(Prefix = "deleted")]IEnumerable&lt;EditableProduct&gt; deletedProducts)
+{
+    if (insertedProducts != null)
+    {
+        foreach (var product in insertedProducts)
+        {
+            // perform insert
+        }
+    }
+
+    if (updatedProducts != null)
+    {
+        foreach (var product in updatedProducts)
+        {
+            //perform update
+        }
+    }
+
+    if (deletedProducts != null)
+    {
+        foreach (var product in deletedProducts)
+        {
+            //perform update
+        }
+    }
+    
+    return View(new GridModel(SessionProductRepository.All()));
+}
+</pre>        
+    </li>
+</ol>

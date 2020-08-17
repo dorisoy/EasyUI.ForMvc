@@ -1,0 +1,11 @@
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\Telerik.MSBuildTasks\bin\Debug\EasyUI.MSBuildTasks.dll
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\Telerik.MSBuildTasks\bin\Debug\EasyUI.MSBuildTasks.pdb
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\Telerik.MSBuildTasks\obj\x86\Debug\EasyUI.MSBuildTasks.csprojResolveAssemblyReference.cache
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\Telerik.MSBuildTasks\obj\x86\Debug\EasyUI.MSBuildTasks.dll
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\Telerik.MSBuildTasks\obj\x86\Debug\EasyUI.MSBuildTasks.pdb
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\EasyUI.MSBuildTasks\bin\Debug\EasyUI.MSBuildTasks.dll
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\EasyUI.MSBuildTasks\bin\Debug\EasyUI.MSBuildTasks.pdb
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\EasyUI.MSBuildTasks\obj\x86\Debug\EasyUI.MSBuildTasks.csproj.CoreCompileInputs.cache
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\EasyUI.MSBuildTasks\obj\x86\Debug\EasyUI.MSBuildTasks.dll
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\EasyUI.MSBuildTasks\obj\x86\Debug\EasyUI.MSBuildTasks.pdb
+E:\ASP.NET开源项目\B2C\EasyUI.Web.Mvc.UI\EasyUI.MSBuildTasks\obj\x86\Debug\EasyUI.MSBuildTasks.csprojResolveAssemblyReference.cache

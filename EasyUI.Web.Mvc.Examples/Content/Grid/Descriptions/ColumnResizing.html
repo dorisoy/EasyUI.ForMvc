@@ -1,0 +1,12 @@
+﻿<p>
+    This example demonstrates the column resizing feature of EasyUI Grid for ASP.NET MVC. 
+</p>
+<p>
+    To enable column resizing use the <code>Resizable</code> method:
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        <em>.Resizable(resizing =&gt; resizing.Columns(true))</em>
+%&gt;
+</pre>

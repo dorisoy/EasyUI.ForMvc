@@ -1,0 +1,27 @@
+﻿<p>
+This example shows how set the server-side row template of the grid. The row template allows you to customize
+the way the entire row is presented in the grid. Server-side row templates are used in server binding scenarios.
+</p>
+<p>
+    To set the server-side template use the <code>RowTemplate</code> method. 
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid&lt;EditableCustomer&gt;()
+        .Name("Grid")
+        .RowTemplate((c, grid) =&gt;
+          {
+           %&gt; 
+            &lt;div class="employee-details"&gt;
+                &lt;img src='&lt;%= Url.Content("~/Content/Grid/Customers/" + c.CustomerID + ".jpg") %&gt;' alt='&lt;%= c.ContactName %&gt;' /&gt;
+                &lt;ul&gt;
+                   &lt;li&gt;&lt;label&gt;Name:&lt;/label&gt;&lt;%= c.ContactName %&gt;&lt;/li&gt;
+                   &lt;li&gt;&lt;label&gt;Country:&lt;/label&gt;&lt;%= c.Country %&gt;&lt;/li&gt;
+                   &lt;li&gt;&lt;label&gt;Address:&lt;/label&gt;&lt;%= c.Address %&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+             &lt;%= grid.EditButton(c) %&gt; &lt;%= grid.DeleteButton(c) %&gt;
+           &lt;%
+          }
+        )
+%&gt;
+</pre>

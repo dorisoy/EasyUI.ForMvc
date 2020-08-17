@@ -1,0 +1,55 @@
+﻿<p>
+    This example shows how to use the client detail template - the detail template used in ajax and web service binding scenarios.
+</p>
+<p>
+    Important notes:
+</p>
+<ol>
+    <li>Use the <code>ClientTemplate</code> method to set the client template (used only for ajax and web wervice binding scenarios).</li>
+    <li>Make sure the <code>Name</code> of any UI component defined in the template is unique. A property of the bound object can be used to ensure
+        such uniqueness by utilizing client binding expressions: <code>Name("Orders_<#= EmployeeID #>")</code>.
+    </li>
+    <li>
+        Calling the <code>ToHtmlString</code> method is required in order to output the contents of any UI components defined in the client detail template.
+    </li>
+    <li>
+        If the master grid is client bound (ajax or web service) so must be the child grids (defined in the client detail template).
+    </li>
+</ol>    
+<p>
+Example:
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid&lt;EmployeeViewModel&gt;()
+        .Name("Employees")
+        .DetailView(details =&gt; <em>details.ClientTemplate</em>(
+            Html.EasyUI().TabStrip()
+                <em>.Name("TabStrip_&lt;#= EmployeeID #&gt;")</em>
+                .SelectedIndex(0)
+                .Items(items =&gt;
+                {
+                    items.Add().Text("Orders").Content(
+                            Html.EasyUI().Grid&lt;OrderViewModel&gt;()
+                                <em>.Name("Orders_&lt;#= EmployeeID #&gt;")</em>
+                                .DataBinding(dataBinding =&gt; dataBinding.Ajax()
+                                .Select("_OrdersForEmployeeDetailsAjax", "Grid", new { employeeID = "&lt;#= EmployeeID #&gt;" }))
+                                .Pageable()
+                                <em>.ToHtmlString()</em>);
+                    items.Add().Text("Contact Information").Content(
+                        "&lt;div class='employee-details'&gt;" +
+                            "&lt;ul&gt;" + 
+                                "&lt;li&gt;&lt;label&gt;Birth Date:&lt;/label&gt;&lt;#= $.easyui.formatString('{0:d}', BirthDate) #&gt;&lt;/li&gt;" +
+                                "&lt;li&gt;&lt;label&gt;Country:&lt;/label&gt;&lt;#= Country #&gt;&lt;/li&gt;" +
+                                "&lt;li&gt;&lt;label&gt;City:&lt;/label&gt;&lt;#= City #&gt;&lt;/li&gt;" +
+                                "&lt;li&gt;&lt;label&gt;Address:&lt;/label&gt;&lt;#= Address #&gt;&lt;/li&gt;" +
+                                "&lt;li&gt;&lt;label&gt;Home Phone:&lt;/label&gt;&lt;#= HomePhone #&gt;&lt;/li&gt;" +
+                            "&lt;/ul&gt;" +
+                        "&lt;/div&gt;"    
+                        );
+                })
+                <em>.ToHtmlString()</em>
+        ))
+        .DataBinding(dataBinding =&gt; dataBinding.Ajax().Select("_EmployeesDetailsAjax", "Grid"))
+        .Scrollable(scrolling =&gt; scrolling.Height(555))
+    %&gt;
+</pre>

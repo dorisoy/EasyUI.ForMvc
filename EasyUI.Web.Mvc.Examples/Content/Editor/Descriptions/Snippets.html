@@ -1,0 +1,20 @@
+﻿<p>
+    This example shows how to define snippets in EasyUI Editor for ASP.NET MVC.
+</p>
+<p>
+    You can use the <code>Snippets</code> method to configure the HTML snippets available to the end users. To add a literal snippet
+    use the <code>Add(string title, string snippet)</code> method. To add a snippet defined in a file use the <code>AddFromFile(string title, string pathToSnippet)</code> method:
+</p>
+<pre class="prettyprint">
+    &lt;%= Html.EasyUI().Editor()
+            .Name("Editor")
+            .Tools(tools =&gt; tools
+                .Clear()
+                .Snippets(snippets =&gt; snippets
+                        <em>.Add("Signature", "&lt;p&gt;Regards,&lt;br /&gt; John Doe")
+                        .AddFromFile("Editor Features", "~/Content/Editor/Snippets/Features.html"))
+                        </em>
+            )
+    %&gt;
+
+</pre>

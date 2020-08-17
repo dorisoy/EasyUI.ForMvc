@@ -1,0 +1,40 @@
+﻿<p>
+    This example shows how to use the client-side API of EasyUI ComboBox for ASP.NET MVC and EasyUI DropDownList for ASP.NET MVC.
+</p>
+<p>
+    To use the client-side API you should first retrieve the combobox/dropdownlist client-side object.
+    The following code snippet shows how to do this for the combobox:
+</p>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot;&gt;
+function getComboBox(){
+    //"ComboBox" is the value specified by the Name() method.
+    var combobox = $("#ComboBox").data("tComboBox");
+    return combobox;
+}
+&lt;/script&gt;
+</pre>
+<p>
+    Available client-side methods:
+</p>
+<ul>
+    <li>
+        You can open suggestion list with the <strong>open()</strong> method.
+    </li>
+    <li>
+        You can close suggestion list with the <strong>close()</strong> method.
+    </li>
+    <li>
+        You can select an item with the <strong>select(...)</strong>. This method accepts a DOM element representing an existing
+        item of the suggestion list, jQuery selector.
+    </li>
+    <li>
+        You can get value of the selected item <strong>value()</strong>. This method can be use also for setting value.
+    </li>
+    <li>
+        You can enable ComboBox or DropDownlist with the <strong>enable()</strong> method.
+    </li>
+    <li>
+        You can disable ComboBox or DropDownlist with the <strong>disable()</strong> method.
+    </li>
+</ul>

@@ -1,0 +1,55 @@
+﻿<p>
+    This example shows the client-side events supported by EasyUI Splitter for ASP.NET
+    MVC.
+</p>
+<p>
+    The splitter has the following events:
+</p>
+<ul>
+    <li><strong>OnLoad</strong> - raised when the component is initialized</li>
+    <li><strong>OnResize</strong> - raised when a pane is resized</li>
+    <li><strong>OnExpand <span class="cancellable">(cancellable)</span></strong> - raised when a pane gets expanded</li>
+    <li><strong>OnCollapse <span class="cancellable">(cancellable)</span></strong> - raised when a pane gets collapsed</li>
+    <li><strong>OnContentLoad</strong> - raised when a request for the pane contents has finished</li>
+</ul>
+<p>
+    You can subscribe to each of the events in the following ways:</p>
+<ul>
+    <li>With a pre-defined javascript function
+        <pre class="prettyprint">
+&lt;%= Html.EasyUI().Splitter()
+        .Name("Splitter")
+        .ClientEvents(events => events
+            <em>.OnResize("onResize")</em>
+        )
+%&gt;
+
+&lt;script type="text/javascript"&gt;
+    function onResize(e) {
+        // your code
+    }
+&lt;/script&gt;
+</pre>
+    </li>
+    <li>With an inline function, serialized from the server
+        <pre class="prettyprint">
+&lt;% Html.EasyUI().Splitter()
+       .Name("Splitter")
+       .ClientEvents(events => events
+       <em>.OnLoad(() => {%&gt; function(e) { /* your code */ } &lt;%})</em>
+       .Render();
+%&gt;
+</pre>
+    </li>
+    <li>Purely client-side event registration
+        <pre class="prettyprint">
+&lt;%= Html.EasyUI().Splitter().Name("Splitter") %&gt;
+
+&lt;script type="text/javascript"&gt;
+    $(document).ready(function() {
+        <em>$('#Splitter').bind('contentLoad', function(e) { /* your code */ });</em>
+    });
+&lt;/script&gt;
+</pre>
+    </li>
+</ul>

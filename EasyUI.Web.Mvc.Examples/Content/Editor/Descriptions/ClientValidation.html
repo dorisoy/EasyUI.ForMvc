@@ -1,0 +1,22 @@
+﻿<p>
+    This example shows how EasyUI Editor for ASP.NET MVC is using build-in client validation of the ASP.NET MVC 2.0.
+</p>
+<p>
+    Validation of the Model is based on the <em>DataAnnotations</em>. Except, all required actions to enable build-in client validation,
+    important thing is that the editor should have the same name as the validated property of the Model. In other words
+    if <strong>Notes</strong> is a property of the Model, editor should be named "Notes".
+</p>
+<p>
+    Here is the definition of the <em>Notes</em> property, which is validated in this demo:
+</p>
+<pre class="prettyprint">
+        [Required]
+        public string Notes
+        {
+            get;
+            set;
+        }
+</pre>
+<p>
+    The <strong>[Required]</strong> attribute comes from the <em>System.ComponentModel.DataAnnotations</em>.
+</p>

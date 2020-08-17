@@ -1,0 +1,13 @@
+﻿<p>
+    This example shows how to load the content of a splitter pane asynchronously.
+</p>
+<p>
+    To load the pane content using AJAX, use the <code>LoadContentFrom</code> method:
+</p>
+
+<pre class="prettyprint">
+&lt;% Html.EasyUI().Splitter()
+        .Name("Splitter")
+        <em>.LoadContentFrom("Action", "Controller");</em>
+%&gt;
+</pre>

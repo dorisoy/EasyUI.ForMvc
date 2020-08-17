@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Customer>
+
+@{ Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        .Columns(columns =>
+        {
+            columns.Template(
+                @<text>
+                    <img 
+                        alt="@item.CustomerID " 
+                        src="@Url.Content("~/Content/Grid/Customers/" + item.CustomerID + ".jpg") " 
+                      />
+                </text>
+            ).Title("Picture");
+            columns.Bound(c => c.ContactName).Title("Name");
+            columns.Bound(c => c.Phone);
+        })
+        .Sortable()
+        .Scrollable(scrolling => scrolling.Height(250))
+        .Pageable()
+        .Render();
+ }
+

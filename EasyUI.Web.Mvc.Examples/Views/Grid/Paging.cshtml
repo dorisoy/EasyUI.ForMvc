@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Order>
+
+
+@using (Html.Configurator("The pager should ...")
+              .PostTo("Paging", "Grid")
+              .Begin())
+   { 
+    <ul>
+        <li>@Html.CheckBox("pageInput", false, "have an <strong>input box</strong> for the page number")</li>
+        <li>@Html.CheckBox("nextPrevious", true, "have <strong>next page / previous page</strong> buttons")</li>
+        <li>@Html.CheckBox("numeric", true, "have a <strong>numeric pager</strong>")</li>
+    </ul>
+    <div>
+        <label for="position">be located at</label>
+        @Html.DropDownList("position", new SelectList(new[] { GridPagerPosition.Bottom, GridPagerPosition.Top, GridPagerPosition.Both }))
+    </div>
+    <div>
+        <label>be at page</label>
+        @(Html.EasyUI().IntegerTextBox()
+                .Name("currentPage")
+                .MinValue(1)
+                .MaxValue(83)
+                .Value(1)
+         )
+     </div>
+    <button class="t-button t-state-default" type="submit">Apply</button>
+ } 
+
+@{ 
+    var pagerStyleFlags = new[] 
+    { 
+        new { Key = "pageInput", Value = GridPagerStyles.PageInput },
+        new { Key = "nextPrevious", Value = GridPagerStyles.NextPrevious },
+        new { Key = "numeric", Value = GridPagerStyles.Numeric }
+    };
+
+    GridPagerStyles pagerStyles = GridPagerStyles.NextPreviousAndNumeric;
+
+    foreach (var pagerStyleFlag in pagerStyleFlags)
+    {
+        bool pagerStyle = (bool)ViewData[pagerStyleFlag.Key];
+        if (pagerStyle == true)
+        {
+            pagerStyles |= pagerStyleFlag.Value;
+        }
+        else
+        {
+            pagerStyles &= ~pagerStyleFlag.Value;
+        }
+    }
+
+    var position = (GridPagerPosition)ViewData["position"];
+    var currentPage = (int)ViewData["currentPage"];
+    
+    currentPage = Math.Max(currentPage, 1);
+    currentPage = Math.Min(currentPage, 83);
+    
+    Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        .Columns(columns =>
+        {
+            columns.Bound(o => o.OrderID).Width(81);
+            columns.Bound(o => o.Customer.ContactName).Width(200);
+            columns.Bound(o => o.ShipAddress);
+            columns.Bound(o => o.OrderDate).Format("{0:MM/dd/yyyy}").Width(100);
+        })
+        .DataBinding(dataBinding => dataBinding.Ajax().Select("_Paging", "Grid"))
+        .Pageable(paging => paging.Style(pagerStyles).Position(position).PageTo(currentPage))
+        .Scrollable()
+        .Render();
+        
+}
+
+

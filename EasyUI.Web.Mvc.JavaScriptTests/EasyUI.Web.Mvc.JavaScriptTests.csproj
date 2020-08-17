@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyUI.Web.Mvc.JavaScriptTests</RootNamespace>
+    <AssemblyName>EasyUI.Web.Mvc.JavaScriptTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MVC1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;MVC1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug MVC2|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MVC2</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release MVC2|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;MVC2</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug MVC2 Coverage|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MVC2</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\EasyUI.Web.Mvc.JavaScriptTests.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug MVC3|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MVC3</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release MVC3|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;MVC3</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <Choose>
+    <When Condition=" '$(Configuration)|$(Platform)' == 'Debug MVC3|AnyCPU' Or '$(Configuration)|$(Platform)' == 'Release MVC3|AnyCPU'">
+      <ItemGroup>
+        <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup Condition="$(TargetFrameworkVersion) == 'v4.0'">
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CalendarController.cs" />
+    <Compile Include="Controllers\ComboBoxController.cs" />
+    <Compile Include="Controllers\AutoCompleteController.cs" />
+    <Compile Include="Controllers\ChartController.cs" />
+    <Compile Include="Controllers\SplitterController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="Controllers\SliderController.cs" />
+    <Compile Include="Controllers\DateTimePickerController.cs" />
+    <Compile Include="Controllers\DropDownController.cs" />
+    <Compile Include="Controllers\EditorController.cs" />
+    <Compile Include="Controllers\DropDownListController.cs" />
+    <Compile Include="Controllers\TimePickerController.cs" />
+    <Compile Include="Extensions\ControllerExtensions.cs" />
+    <Compile Include="Controllers\TabStripController.cs" />
+    <Compile Include="Controllers\TreeViewController.cs" />
+    <Compile Include="Controllers\InputController.cs" />
+    <Compile Include="Controllers\DatePickerController.cs" />
+    <Compile Include="Controllers\PanelBarController.cs" />
+    <Compile Include="Controllers\CoreController.cs" />
+    <Compile Include="Controllers\GridController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\WindowController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\qunit-runner.css" />
+    <Content Include="Content\qunit.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\editorTestHelper.js" />
+    <Content Include="Scripts\jquery.mockjax.js" />
+    <Content Include="Scripts\qunit-runner.js" />
+    <Content Include="Scripts\qunit.js" />
+    <Content Include="Scripts\splitterTestHelper.js" />
+    <Content Include="Views\AutoComplete\ClientAPI.aspx" />
+    <Content Include="Views\AutoComplete\ClientSideRendering.aspx" />
+    <Content Include="Views\AutoComplete\Multiple.aspx" />
+    <Content Include="Views\AutoComplete\KeyboardSupport.aspx" />
+    <Content Include="Views\Calendar\ClientEvents.aspx" />
+    <Content Include="Views\Calendar\ClientAPI.aspx" />
+    <Content Include="Views\Calendar\Navigation.aspx" />
+    <Content Include="Views\Calendar\Rendering.aspx" />
+    <Content Include="Views\Calendar\StaticMethods.aspx" />
+    <Content Include="Views\Chart\Configuration.aspx" />
+    <Content Include="Views\ComboBox\ClientAPI.aspx" />
+    <Content Include="Views\ComboBox\AjaxLoading.aspx" />
+    <Content Include="Views\AutoComplete\ClientEvents.aspx" />
+    <Content Include="Views\ComboBox\ClientEvents.aspx" />
+    <Content Include="Views\ComboBox\ClientSideRendering.aspx" />
+    <Content Include="Views\ComboBox\Filtering.aspx" />
+    <Content Include="Views\AutoComplete\Rendering.aspx" />
+    <Content Include="Views\ComboBox\KeyboardSupport.aspx" />
+    <Content Include="Views\ComboBox\FilteringData.aspx" />
+    <Content Include="Views\ComboBox\Rendering.aspx" />
+    <Content Include="Views\Core\Linq.aspx" />
+    <Content Include="Views\Core\TimeParsing.aspx" />
+    <Content Include="Views\Core\FormatString.aspx" />
+    <Content Include="Views\DatePicker\ClientSideRendering.aspx" />
+    <Content Include="Views\DatePicker\DateView.aspx" />
+    <Content Include="Views\DatePicker\Popup.aspx" />
+    <Content Include="Views\DateTimePicker\ClientEvents.aspx" />
+    <Content Include="Views\DateTimePicker\ClientSideRendering.aspx" />
+    <Content Include="Views\DateTimePicker\ComponentInitialization.aspx" />
+    <Content Include="Views\DateTimePicker\ClientApi.aspx" />
+    <Content Include="Views\DateTimePicker\Globalization.aspx" />
+    <Content Include="Views\DateTimePicker\KeyboardSupport.aspx" />
+    <Content Include="Views\DropDownList\ClientAPI.aspx" />
+    <Content Include="Views\DropDownList\ClientSideRendering.aspx" />
+    <Content Include="Views\DropDownList\DropDownRendering.aspx" />
+    <Content Include="Views\DropDownList\ClientEvents.aspx" />
+    <Content Include="Views\Core\NumberFormatting.aspx" />
+    <Content Include="Views\Core\DateFormatting.aspx" />
+    <Content Include="Views\DatePicker\ClientAPI.aspx" />
+    <Content Include="Views\DatePicker\DateParsing.aspx" />
+    <Content Include="Views\DatePicker\DatePicker.aspx" />
+    <Content Include="Views\DatePicker\ParseByToken.aspx" />
+    <Content Include="Views\DatePicker\ClientEvents.aspx" />
+    <Content Include="Views\DropDown\DropDown.aspx" />
+    <Content Include="Views\DropDown\Loader.aspx" />
+    <Content Include="Views\Editor\Backspace.aspx" />
+    <Content Include="Views\Editor\BlockFormatFinder.aspx" />
+    <Content Include="Views\Editor\BlockFormatter.aspx" />
+    <Content Include="Views\Editor\Breadcrumbs.aspx" />
+    <Content Include="Views\Editor\ClientEvents.aspx" />
+    <Content Include="Views\Editor\ApplyBlockFormats.aspx" />
+    <Content Include="Views\Editor\ClientSideApi.aspx" />
+    <Content Include="Views\Editor\Clipboard.aspx" />
+    <Content Include="Views\Editor\Components.aspx" />
+    <Content Include="Views\Editor\SearchBox.aspx" />
+    <Content Include="Views\Editor\FileInfoReader.aspx" />
+    <Content Include="Views\Editor\FileListView.aspx" />
+    <Content Include="Views\Editor\PendingFormats.aspx" />
+    <Content Include="Views\Editor\RtlSupport.aspx" />
+    <Content Include="Views\Editor\Dom.aspx" />
+    <Content Include="Views\Editor\ExpandRange.aspx" />
+    <Content Include="Views\Editor\FormatBlock.aspx" />
+    <Content Include="Views\Editor\GreedyBlockFormatter.aspx" />
+    <Content Include="Views\Editor\GreedyInlineFormatFinder.aspx" />
+    <Content Include="Views\Editor\GreedyInlineFormatter.aspx" />
+    <Content Include="Views\Editor\ImageCommand.aspx" />
+    <Content Include="Views\Editor\IndentCommand.aspx" />
+    <Content Include="Views\Editor\IndentFormatter.aspx" />
+    <Content Include="Views\Editor\InlineFormatFinder.aspx" />
+    <Content Include="Views\Editor\InlineFormatter.aspx" />
+    <Content Include="Views\Editor\InsertHtmlCommand.aspx" />
+    <Content Include="Views\Editor\Keyboard.aspx" />
+    <Content Include="Views\Editor\LinkCommand.aspx" />
+    <Content Include="Views\Editor\ListCommand.aspx" />
+    <Content Include="Views\Editor\ListFormatFinder.aspx" />
+    <Content Include="Views\Editor\Marker.aspx" />
+    <Content Include="Views\Editor\MSWordFormatCleaner.aspx" />
+    <Content Include="Views\Editor\NewLine.aspx" />
+    <Content Include="Views\Editor\OutdentCommand.aspx" />
+    <Content Include="Views\Editor\Paragraph.aspx" />
+    <Content Include="Views\Editor\RemoveBlockFormats.aspx" />
+    <Content Include="Views\Editor\GenericCommand.aspx" />
+    <Content Include="Views\Editor\FormatCommand.aspx" />
+    <Content Include="Views\Editor\RestorePoint.aspx" />
+    <Content Include="Views\Editor\Selection.aspx" />
+    <Content Include="Views\Editor\Shortcuts.aspx" />
+    <Content Include="Views\Editor\Style.aspx" />
+    <Content Include="Content\styles.css" />
+    <Content Include="Views\Editor\SystemHandler.aspx" />
+    <Content Include="Views\Editor\RangeEnumerator.aspx" />
+    <Content Include="Views\Editor\Toolbar.aspx" />
+    <Content Include="Views\Editor\Exec.aspx" />
+    <Content Include="Views\Editor\RemoveInlineFormats.aspx" />
+    <Content Include="Views\Editor\TypingHandler.aspx" />
+    <Content Include="Views\Editor\UndoRedoStack.aspx" />
+    <Content Include="Views\Editor\ListFormatter.aspx" />
+    <Content Include="Views\Editor\UnlinkCommand.aspx" />
+    <Content Include="Views\Grid\ButtonBuilders.aspx" />
+    <Content Include="Views\Grid\CellEditor.aspx" />
+    <Content Include="Views\Grid\ChangeSet.aspx" />
+    <Content Include="Views\Grid\ColumnHiding.aspx" />
+    <Content Include="Views\Grid\Navigation.aspx" />
+    <Content Include="Views\Grid\PopUpEditor.aspx" />
+    <Content Include="Views\Grid\FormContainerBuilder.aspx" />
+    <Content Include="Views\Grid\Editor.aspx" />
+    <Content Include="Views\Grid\DataCellBuilder.aspx" />
+    <Content Include="Views\Grid\FormViewBinder.aspx" />
+    <Content Include="Views\Grid\ModelBinder.aspx" />
+    <Content Include="Views\Grid\ErrorView.aspx" />
+    <Content Include="Views\Grid\ModelStateErrors.aspx" />
+    <Content Include="Views\Input\ClientSideRendering.aspx" />
+    <Content Include="Views\Input\NumberParsing.aspx" />
+    <Content Include="Views\PanelBar\Selection.aspx" />
+    <Content Include="Views\Grid\EditorTemplates\Address.ascx" />
+    <Content Include="Views\Grid\EditorTemplates\int.ascx" />
+    <Content Include="Views\Editor\Serialization.aspx" />
+    <Content Include="Views\Editor\Range.aspx" />
+    <Content Include="Views\Editor\ApplyInlineFormats.aspx" />
+    <Content Include="Views\Grid\Binding.aspx" />
+    <Content Include="Views\Grid\ClientEvents.aspx" />
+    <Content Include="Views\Grid\ClientTemplates.aspx" />
+    <Content Include="Views\Grid\Localization.aspx" />
+    <Content Include="Views\Grid\Layout.aspx" />
+    <Content Include="Views\Grid\Editing.aspx" />
+    <Content Include="Views\Grid\Filtering.aspx" />
+    <Content Include="Views\Grid\Grouping.aspx" />
+    <Content Include="Views\Grid\Paging.aspx" />
+    <Content Include="Views\Grid\Selection.aspx" />
+    <Content Include="Views\Grid\Sorting.aspx" />
+    <Content Include="Views\Input\ClientAPI.aspx" />
+    <Content Include="Views\Input\ClientEvents.aspx" />
+    <Content Include="Views\Input\NumericTextBox.aspx" />
+    <Content Include="Views\Menu\ClientAPI.aspx" />
+    <Content Include="Views\Menu\OpenOnClick.aspx" />
+    <Content Include="Views\PanelBar\AjaxView1.ascx" />
+    <Content Include="Views\PanelBar\AjaxView2.ascx" />
+    <Content Include="Views\PanelBar\AjaxLoading.aspx" />
+    <Content Include="Views\PanelBar\ClientAPI.aspx" />
+    <Content Include="Views\PanelBar\Serialization.aspx" />
+    <Content Include="Views\PanelBar\SingleExpandClientAPI.aspx" />
+    <Content Include="Views\PanelBar\SingleExpandCollapse.aspx" />
+    <Content Include="Views\PanelBar\ExpandCollapse.aspx" />
+    <Content Include="Views\Grid\EditorTemplates\Date.ascx" />
+    <Content Include="Views\Slider\RangeSlider.aspx" />
+    <Content Include="Views\Slider\Slider.aspx" />
+    <Content Include="Views\Splitter\ClientCreation.aspx" />
+    <Content Include="Views\Splitter\ClientEvents.aspx" />
+    <Content Include="Views\Splitter\ClientSideApi.aspx" />
+    <Content Include="Views\Splitter\ExpandCollapse.aspx" />
+    <Content Include="Views\Splitter\LoadOnDemand.aspx" />
+    <Content Include="Views\Splitter\PaneResizing.aspx" />
+    <Content Include="Views\Splitter\PaneSizing.aspx" />
+    <Content Include="Views\Slider\ClientSideAPI.aspx" />
+    <Content Include="Views\Slider\Rendering.aspx" />
+    <Content Include="Views\TabStrip\AjaxLoading.aspx" />
+    <Content Include="Views\TabStrip\AjaxView1.ascx" />
+    <Content Include="Views\TabStrip\AjaxView2.ascx" />
+    <Content Include="Views\TabStrip\ClientAPI.aspx" />
+    <Content Include="Views\TabStrip\Serialization.aspx" />
+    <Content Include="Views\TimePicker\ClientAPI.aspx" />
+    <Content Include="Views\TimePicker\ClientEvents.aspx" />
+    <Content Include="Views\TimePicker\ClientSideRendering.aspx" />
+    <Content Include="Views\TimePicker\TimeView.aspx" />
+    <Content Include="Views\TimePicker\KeyboardSupport.aspx" />
+    <Content Include="Views\TimePicker\Rendering.aspx" />
+    <Content Include="Views\TreeView\ClientEvents.aspx" />
+    <Content Include="Views\TreeView\ClientSideRendering.aspx" />
+    <Content Include="Views\TreeView\ClientAPI.aspx" />
+    <Content Include="Views\TreeView\DragAndDrop.aspx" />
+    <Content Include="Views\TreeView\ExpandCollapse.aspx" />
+    <Content Include="Views\Upload\Common\Async.ascx" />
+    <Content Include="Views\Upload\Common\AsyncNoAuto.ascx" />
+    <Content Include="Views\Upload\Common\AsyncNoMultiple.ascx" />
+    <Content Include="Views\Upload\Common\Events\Cancel.ascx" />
+    <Content Include="Views\Upload\Common\Events\Remove.ascx" />
+    <Content Include="Views\Upload\Common\Events\Error.ascx" />
+    <Content Include="Views\Upload\Common\Events\Success.ascx" />
+    <Content Include="Views\Upload\Common\Events\Upload.ascx" />
+    <Content Include="Views\Upload\Common\Events\Select.ascx" />
+    <Content Include="Views\Upload\Common\Selection.ascx" />
+    <Content Include="Views\Upload\DragAndDrop.aspx" />
+    <Content Include="Views\Upload\Rendering.aspx" />
+    <Content Include="Views\Upload\FormDataUpload.aspx" />
+    <Content Include="Views\Upload\IframeUpload.aspx" />
+    <Content Include="Views\Upload\SyncUpload.aspx" />
+    <Content Include="Views\Upload\Upload.master" />
+    <Content Include="Views\Window\ClientCreation.aspx" />
+    <Content Include="Views\TreeView\LoadOnDemand.aspx" />
+    <Content Include="Views\Window\ClientSideApi.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasyUI.Web.Mvc\EasyUI.Web.Mvc.csproj">
+      <Project>{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}</Project>
+      <Name>EasyUI.Web.Mvc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web.MVC2.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterCompile">
+    <!-- Resources, needed to run tests -->
+    <ItemGroup>
+      <SharedCssResources Include="..\EasyUI.Web.Mvc\Content\**\*">
+        <Visible>false</Visible>
+      </SharedCssResources>
+      <SharedJsResources Include="..\EasyUI.Web.Mvc\Scripts\**\*.js">
+        <Visible>false</Visible>
+      </SharedJsResources>
+    </ItemGroup>
+    <Message Importance="high" Text="Copying resources..." />
+    <!-- Copy the CSS files to Scripts -->
+    <Copy SourceFiles="@(SharedJsResources)" DestinationFolder="Scripts\%(RecursiveDir)">
+      <Output TaskParameter="DestinationFiles" ItemName="Resources" />
+    </Copy>
+    <!-- Copy the CSS files to Content -->
+    <Copy SourceFiles="@(SharedCssResources)" DestinationFolder="Content\%(RecursiveDir)">
+      <Output TaskParameter="DestinationFiles" ItemName="Resources" />
+    </Copy>
+    <ItemGroup>
+      <!-- FileWrites is the list of files to delete when performing a Clean -->
+      <FileWrites Include="@(Resources)" />
+    </ItemGroup>
+  </Target>
+  <Target Name="InstrumentScripts">
+    <RemoveDir Directories="InstrumentedScripts" />
+    <Message Importance="high" Text="Instrumenting scripts..." />
+    <Exec Command="Build\jscoverage.exe --no-instrument=jsunit --no-instrument=editor --encoding=UTF-8 Scripts InstrumentedScripts">
+    </Exec>
+  </Target>
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>38521</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

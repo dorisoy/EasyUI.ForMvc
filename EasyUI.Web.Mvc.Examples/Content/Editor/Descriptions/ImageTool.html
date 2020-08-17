@@ -1,0 +1,22 @@
+﻿<p> This example shows the Editor component built-in image browser feature. </p>
+<p>
+Since the Q1 2011 release EasyUI Editor for ASP.NET MVC supports a new way of picking an image by browsing a list of predefined files and directories. Uploading new images is also supported. <br/>
+</p>
+<p>
+The image browser needs a server side implementation (a controller) to retrieve the files and directories. A base controller class is provided by EasyUI. You can override some of its methods to customize the behavior. Alternatively, you can implement a completely custom controller without using the base class.
+</p>
+<p>Once the controller is setted up, you need to configure your editor for image browsing:</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Editor()
+        .Name("Editor")
+        .FileBrowser(browser =&gt; browser.Browse("Browse", "ImageBrowser")
+                              .Thumbnail("Thumbnail", "ImageBrowser")
+                              .Upload("Upload", "ImageBrowser")
+                              .DeleteFile("DeleteFile", "ImageBrowser")
+                              .DeleteDirectory("DeleteDirectory", "ImageBrowser")
+                              .CreateDirectory("CreateDirectory", "ImageBrowser"))
+%&gt;
+</pre>
+<p>
+Detailed descriptions regarding image browser can be found in the product's documentation <a href="http://www.easyui.com/help/aspnet-mvc/easyui-ui-components-editor-image-browser.html">here</a>.
+</p>

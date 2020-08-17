@@ -1,0 +1,23 @@
+﻿<p>
+    This example demonstrates how to use a custom toolbar template in EasyUI Grid for ASP.NET
+    MVC. The template can be declared through the ToolBar's Template method. In this particular
+    example the template is used as a container for a filtering ComboBox.
+</p>
+<p>
+    To define a custom template use the following code
+</p>
+<pre class="prettyprint">
+&lt;% Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        .ToolBar(toolBar =&gt; toolBar.Template(() =&gt;
+        { 
+            %&gt;
+            &lt;label&gt;Show orders for customer:&lt;/label&gt;
+            &lt;%= Html.EasyUI().ComboBox()
+                    .Name("Customers")                                               
+            %&gt;
+            &lt;% 
+        }))
+        .Render();
+%&gt;
+</pre>

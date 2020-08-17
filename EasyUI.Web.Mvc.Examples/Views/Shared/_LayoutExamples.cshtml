@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section HeadContent{
+    @RenderSection("HeadContent", required:false)
+}
+
+<div class="example">
+	<h2 class="example-title">@Html.ExampleTitle()</h2>
+
+
+	@*<div id="theming"><a href="#" class="t-drop-down">@Html.GetCurrentTheme()</a></div>
+	<script type="text/javascript">
+	    var currentComponent = '@ViewContext.RouteData.Values["Controller"]',
+            themePreviewsLocation = '@Url.Content("~/Content/Images/Themes")';
+	</script>*@
+
+	@RenderBody()
+
+	<div class="corner rc-topleft"></div>
+	<div class="corner rc-topright"></div>
+    <div class="eoe"></div>
+</div>
+
+<div class="theme-agnostic">
+	@Html.Partial("_CodeViewer")
+	@Html.Partial("_GetMoreThanExpected")
+</div>

@@ -1,0 +1,83 @@
+﻿<p>
+    This example shows the client-side events supported by EasyUI Upload for ASP.NET MVC.
+</p>
+<p>
+    You can attach an event handler using either of these options:
+</p>
+
+<ol>
+    <li>
+        Specifiy the JavaScript event handler name:
+        <pre class="prettyprint">
+Html.EasyUI().Upload()
+    .Name("attachments")
+    .ClientEvents(events => events
+        <em>.OnLoad("onLoad")</em>
+    )
+        </pre>
+    </li>
+    <li>
+        Declare the event handler inline (WebForms syntax):
+        <pre class="prettyprint">
+&lt;%= Html.EasyUI().Upload()
+    .Name("attachments")
+    .ClientEvents(events => events
+       <em>.OnLoad(() => 
+       {
+        %&gt;
+         function(e) {
+             // Perform required actions here.
+         }
+        &lt;%
+       }</em>
+    )
+%&gt;
+        </pre>
+    </li>
+    <li>
+        Declare the event handler inline (Razor syntax):
+        <pre class="prettyprint">
+@(Html.EasyUI().Upload()
+    .Name("attachments")
+    .ClientEvents(events => events
+        <em>.OnLoad(
+        @&lt;text&gt;
+            function(e) {
+                // Perform required actions here.
+            }
+        &lt;/text&gt;)</em>
+    )
+)
+        </pre>
+    </li>
+</ol>
+
+<p>
+    The upload has the following events:
+</p>
+<ul>
+    <li>
+        <em>OnLoad</em> - raised when the component is initialized
+    </li>
+    <li>
+        <em>OnSelect</em> - raised when one or more files are selected (cancelable)
+    </li>
+    <li>
+        <em>OnUpload</em> - raised when one or more files are about to be uploaded (cancellable)
+    </li>
+    <li>
+        <em>OnSuccess</em> - raised when an upload / remove operation has been completed successfully
+    </li>
+    <li>
+        <em>OnError</em> - raised when an upload / remove operation has failed
+    </li>
+    <li>
+        <em>OnComplete</em> - raised when all active uploads have completed either successfully or with errors
+    </li>
+    <li>
+        <em>OnCancel</em> - raised when the upload has been cancelled while in progress
+    </li>
+    <li>
+        <em>OnRemove</em> - raised when an uploaded file is about to be removed (cancellable)
+    </li>
+</ul>

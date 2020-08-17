@@ -1,0 +1,20 @@
+﻿@model EmployeeDto
+
+
+
+    @{ Html.EasyUI().Editor()
+            .Name("Editor")
+            .Value(@<text>   
+                    <p>Put the cursor after this text and use the "Insert snippet" tool.</p>
+                 
+            </text>)
+            .Tools(tools => tools
+                .Clear()
+                .Snippets(snippets => snippets
+                        .Add("Signature", "<p>Regards,<br /> John Doe,<br /> <a href='mailto:john.doe@example.com'>john.doe@example.com</a></p>")
+                        .AddFromFile("Editor Features", "~/Content/Editor/Snippets/Features.html"))
+            )
+            .Render();
+    }
+
+

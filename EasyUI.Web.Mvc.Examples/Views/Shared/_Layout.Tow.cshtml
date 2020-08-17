@@ -1,0 +1,107 @@
+﻿@using System.Web.Mvc;
+<!DOCTYPE html>
+<!--[if lte IE 7]><html id="html" class="ie oldie ie7" lang="zh-cn"><![endif]-->
+<!--[if IE 8]><html id="html" class="ie oldie ie8" lang="zh-cn"><![endif]-->
+<!--[if IE 9]><html id="html" class="ie ie9" lang="zh-cn"><![endif]-->
+<!--[if !IE]>-->
+<html id="html" lang="zh-cn">
+<!--<![endif]-->
+<head id="Head">
+    <title>EasyUI for ASP.NET MVC</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="EasyUI for ASP.NET MVC" />
+    <link href="@Url.Content("~/favicon.ico")" type="image/x-icon" rel="icon" />
+    <link href="@Url.Content("~/favicon.ico")" type="image/x-icon" rel="shortcut icon" />
+
+    @{
+        @(Html.EasyUI().StyleSheetRegistrar()
+                                      .DefaultGroup(group => group
+                                          .Add("easyui.ui.css")
+                                          .Add("easyui.style.css")
+                                          .Add("easyui.common.css")
+                                          .Add("easyui.examples.min.css")
+                                          .Add("easyui." + Html.GetCurrentTheme() + ".css")
+                                          .Add("easyui.rtl.css")
+                                          .Combined(false)
+                                          .Compress(false)))
+    }
+
+    @RenderSection("HeadContent", required: false)
+    @Html.Partial("_Header")
+</head>
+<body>
+    <div id="aspnetForm">
+        <div class="sf_cols PageWrapper">
+            <div class="sf_colsOut sf_1col_1_100" style="">
+                <div class="sf_colsIn sf_1col_1in_100">
+                    @{
+                        ViewData.Add("layout", 2);
+                        @Html.Partial("_TopNavigation");
+                    }
+
+                    @{
+
+                        Html.EasyUI().Splitter().Name("Splitter_Layout")
+                                .HtmlAttributes(new { style = "height: 100%;margin-top:20px;" })
+                                .Orientation(SplitterOrientation.Vertical)
+                                .Panes(vPanes =>
+                                {
+                                    vPanes.Add()
+                                    .Scrollable(false)
+                                    .Content(Html.EasyUI().Splitter().Name("Splitter_Layout_V")
+                                    .HtmlAttributes(new { style = "height: 100%; width: 100%; border: 0; overflow: hidden;" })
+                                    .Orientation(SplitterOrientation.Horizontal)
+                                    .Panes(hPanes =>
+                                    {
+
+                                        hPanes.Add()
+                                                        .Size("250px")
+                                                        .Collapsible(true)
+                                                        .Scrollable(true)
+                                                        .Content(@<p>@Html.Partial("_LeftNavigation")</p>);
+
+hPanes.Add()
+       .Content(@<div style="padding: 20px 20px 20px 20px;">
+    <h2 class="example-title">@Html.ExampleTitle()</h2>
+    @RenderBody()
+    <div class="theme-agnostic">
+        @Html.Partial("_CodeViewer")
+        @Html.Partial("_GetMoreThanExpected")
+    </div>
+</div>);
+}).ToString());
+})
+.Render();
+                    }
+                </div>
+            </div>
+        </div>
+
+        @*<div class="sf_cols">
+            <div class="sf_colsOut sf_1col_1_100">
+                <div class="sf_colsIn sf_1col_1in_100">
+                    @Html.Partial("_Footer")
+                </div>
+            </div>
+        </div>*@
+    </div>
+
+
+
+
+    @{Html.EasyUI().ScriptRegistrar()
+              .DefaultGroup(group => group
+              .Add("jquery-1.6.4.min.js")
+              //.Add("easyui.common.min.js")
+              .Add("easyui.examples.js")
+              .Compress(true))
+              .OnDocumentReady(() => { })
+              .Render();
+    }
+
+</body>
+</html>
+
+

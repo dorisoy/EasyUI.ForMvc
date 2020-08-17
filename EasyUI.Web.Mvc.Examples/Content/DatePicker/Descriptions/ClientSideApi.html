@@ -1,0 +1,54 @@
+﻿<p>
+    This example shows how to use the client-side API of EasyUI DatePicker for ASP.NET MVC, EasyUI TimePicker for ASP.NET MVC and EasyUI DateTimePicker for ASP.NET MVC.
+</p>
+<p>
+    To use the client-side API you should first retrieve the datepicker client-side object.
+    The following code snippet shows how to do this:
+</p>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot;&gt;
+function getDatePicker(){
+    //"DatePicker" is the value specified by the Name() method.
+    var datePicker = $("#DatePicker").data("tDatePicker");
+    return datePicker;
+}
+&lt;/script&gt;
+</pre>
+<p>
+    Available client-side methods:
+</p>
+<ul>
+    <li>
+        You can set selected date with the <strong>value(...)</strong> method. This method accepts <strong>Date</strong> object or string.
+    </li>
+    <li>
+        You can retrieve selected date with the <strong>value()</strong> method. This method returns <strong>Date</strong> object 
+        or <em>null</em>.
+    </li>
+    <li>
+        You can show drop-down calendar in datepicker with the <strong>showPopup(...)</strong> method.
+    </li>
+    <li>
+        You can hide drop-down calendar in datepicker with the <strong>hidePopup(...)</strong> method.
+    </li>
+    <li>
+        You can use <strong>open(...)</strong> method to open timepicker's time view.
+    </li>
+    <li>
+        You can use <strong>close(...)</strong> method to close timepicker's time view.        
+    </li>
+    <li>
+        You can open date view or time view drop-downs in datetimepicker with the <strong>open(...)</strong> method. 
+        This method accepts <strong>"date"</strong> or <strong>"time"</strong> string.
+    </li>
+    <li>
+        You can close date view or time view drop-downs in datetimepicker with the <strong>close(...)</strong> method. 
+        This method accepts <strong>"date"</strong> or <strong>"time"</strong> string.
+    </li>
+    <li>
+        You can enable datepicker with the <strong>enable()</strong> method.
+    </li>
+    <li>
+        You can disable datepicker with the <strong>disable()</strong> method.
+    </li>
+</ul>

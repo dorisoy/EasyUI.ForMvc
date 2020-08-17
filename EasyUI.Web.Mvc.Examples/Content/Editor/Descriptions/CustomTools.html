@@ -1,0 +1,81 @@
+﻿<p>
+    This example shows how to create a custom tool in EasyUI Editor for ASP.NET MVC.
+</p>
+<p>
+To define a custom tool use the <code>Custom</code> method:
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Editor()
+        .Name("Editor")
+        .Tools(tools =&gt; tools
+                .Clear()
+                <em>.Custom(settings => settings.HtmlAttributes(new { @class = "t-html", onclick = "viewSource(event)" }))</em>
+        )
+%&gt;
+</pre>
+<p>
+    You can then use the editor client-side API and modify the content.
+</p>
+<pre class="prettyprint">
+&lt;script type="text/javascript"&gt;
+    var htmlSourcePopup;
+
+    function viewSource(e) {
+        e = $.Event(e);
+        
+        e.stopPropagation();
+        e.preventDefault();
+        
+        var editor = $('#Editor').data('tEditor');
+        var html = editor.value();
+
+        if (!htmlSourcePopup) {
+            htmlSourcePopup =
+                $('&lt;div class=&quot;html-view&quot;&gt;' +
+                        '&lt;div class=&quot;textarea t-state-default&quot;&gt;&lt;textarea&gt;&lt;/textarea&gt;&lt;/div&gt;' +
+                        '&lt;div class=&quot;t-button-wrapper&quot;&gt;' + 
+                            '&lt;button id=&quot;htmlCancel&quot; class=&quot;t-button&quot;&gt;Cancel&lt;/button&gt;' +
+                            '&lt;button id=&quot;htmlUpdate&quot; class=&quot;t-button&quot;&gt;Update&lt;/button&gt;' +
+                        '&lt;/div&gt;' +
+                    '&lt;/div&gt;')
+                .css('display', 'none')
+                .tWindow({
+                    title: 'View Generated HTML',
+                    modal: true, 
+                    resizable: false, 
+                    draggable: true,
+                    width: 700,
+                    onLoad: function() {
+                        var $popup = $(this);
+                        $popup.find('.textarea')
+                                .css('width', function() {
+                                    return 700 - (this.offsetWidth - $(this).width());
+                                })
+                                .focus()
+                                .end()
+                                .find('#htmlCancel')
+                                .click(function() {
+                                    htmlSourcePopup.close();
+                                })
+                                .end()
+                                .find('#htmlUpdate')
+                                .click(function() {
+                                    var value = $popup.find('textarea').val();
+                                    editor.value(value);
+                                    htmlSourcePopup.close();
+                                });
+                    },
+                    onClose: function() {
+                        editor.focus();
+                    },
+                    effects: $.easyui.fx.toggle.defaults()
+            })
+            .data('tWindow');
+        }
+
+        $(htmlSourcePopup.element).find('textarea').text(html);
+
+        htmlSourcePopup.center().open();
+        
+&lt;/script&gt;
+</pre>

@@ -1,0 +1,27 @@
+﻿    @{ 
+        Html.EasyUI().Editor()
+        .Name("Editor")
+        .Value(@<text> 
+                <p>
+                    <img src="@Url.Content("~/Content/Editor/editor.png")"
+                            alt="Editor for ASP.NET MVC logo"
+                            style="display:block;margin-left:auto;margin-right:auto;" />
+
+                    EasyUI Editor for ASP.NET MVC allows your users to edit HTML in a familiar,
+                    user-friendly way.<br />
+                    In this version, the Editor provides the core HTML editing engine, which includes
+                    basic text formatting, hyperlinks, lists, and image handling.
+                    The extension <strong>outputs identical HTML</strong>
+                    across all major browsers, follows accessibility standards
+                    and provides an extended programming API for content manipulation.
+                </p>
+                </text>)
+        .Tools(tools => tools.Clear().InsertImage())
+        .FileBrowser(t => t.Browse("Browse", "ImageBrowser")
+                              .Thumbnail("Thumbnail", "ImageBrowser")
+                              .Upload("Upload", "ImageBrowser")
+                              .DeleteFile("DeleteFile", "ImageBrowser")
+                              .DeleteDirectory("DeleteDirectory", "ImageBrowser")
+                              .CreateDirectory("CreateDirectory", "ImageBrowser"))
+        .Render();
+    }

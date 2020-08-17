@@ -1,0 +1,32 @@
+﻿<p>
+    This example shows the localize EasyUI Editor for ASP.NET MVC. 
+</p>
+<p>
+    You can use any of the following ways to localize the editor:
+</p>
+<ul>
+    <li>
+        Set the <code>UICulture</code> property of the <code>Page</code> directive:
+<pre class="prettyprint">
+&lt;%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage" <em>UICulture="de-DE"</em> %&gt;
+</pre>
+    </li>
+    <li>        
+        Set the <code>CurrentUICulture</code> property of the <code>CurrentThread</code> in the action method:
+<pre class="prettyprint">
+public ActionResult Index()
+{
+    <em>System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("de-DE");</em>
+}
+</pre>
+    </li>
+    <li>
+        Use the <code>Localizable</code> method of the editor:
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Editor()
+        .Name("Editor")
+        <em>.Localizable("de-DE")</em>
+%&gt;
+</pre>
+    </li>
+</ul>

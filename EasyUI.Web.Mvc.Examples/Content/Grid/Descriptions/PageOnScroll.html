@@ -1,0 +1,15 @@
+﻿<p>
+This example shows "page on scroll" feature of EasyUI Grid for ASP.NET MVC. 
+When the grid is scrolled to the bottom next page is requested. The response 
+is accumulated and the gird is re-bound.
+</p>
+
+<p>
+To enable this feature you need to use <code>PageOnScroll</code> method:
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        .Pageable(paging => paging.Style(GridPagerStyles.Status)<em>.PageOnScroll(true)</em>)
+ %&gt;
+</pre>

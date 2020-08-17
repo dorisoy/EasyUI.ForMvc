@@ -1,0 +1,8 @@
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Examples\bin\Telerik.Web.Mvc.Examples.dll.config
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Examples\bin\Telerik.Web.Mvc.Examples.dll
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Examples\bin\Telerik.Web.Mvc.Examples.pdb
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Examples\bin\Telerik.Web.Mvc.dll
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Examples\obj\Debug MVC3\Telerik.Web.Mvc.Examples.csprojResolveAssemblyReference.cache
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Examples\obj\Debug MVC3\Telerik.Web.Mvc.Examples.dll
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Examples\obj\Debug MVC3\Telerik.Web.Mvc.Examples.pdb
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Examples\bin\Telerik.Web.Mvc.pdb

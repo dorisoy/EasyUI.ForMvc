@@ -1,0 +1,27 @@
+﻿
+@model IEnumerable<SalesData>
+
+@(Html.EasyUI().Chart<SalesData>()
+    .Name("chartAjax")
+    .Theme(Html.GetCurrentTheme())
+    .Title("Representative Sales vs. Total Sales")
+    .Legend(legend => legend
+        .Position(ChartLegendPosition.Bottom)
+    )
+    .Series(series =>
+    {
+        series.Bar("RepSales").Name("Representative Sales").Labels(true);
+        series.Bar(s => s.TotalSales).Name("Total Sales")
+            .Labels(labels => labels
+                .Position(ChartBarLabelsPosition.InsideEnd)
+                .Visible(true)
+            );
+    })
+    .CategoryAxis(axis => axis
+        .Categories(s => s.DateString)
+    )
+    .DataBinding(dataBinding => dataBinding
+        .Ajax().Select("_SalesData", "Chart")
+    )
+    .HtmlAttributes(new { style = "width: 670px; height: 500px;" })
+)

@@ -1,0 +1,12 @@
+﻿<p>
+    This example demonstrates the column reordering feature of EasyUI Grid for ASP.NET MVC. 
+</p>
+<p>
+    To enable column reordering use the <code>Reorderable</code> method:
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().Grid(Model)
+        .Name("Grid")
+        <em>.Reorderable(reorder =&gt; reorder.Columns(true))</em>
+%&gt;
+</pre>

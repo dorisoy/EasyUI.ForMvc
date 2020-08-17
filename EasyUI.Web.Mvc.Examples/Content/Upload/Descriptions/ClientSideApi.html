@@ -1,0 +1,25 @@
+﻿<p>
+    This example shows how to use the client-side API of EasyUI Upload for ASP.NET MVC.
+</p>
+<p>
+    To use the client-side API you should first retrieve the upload's client-side object.
+</p>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot;&gt;
+function getUpload(){
+    // The upload name is &quot;attachments&quot;
+    return $(&quot;#attachments&quot;).data(&quot;tUpload&quot;);
+}
+&lt;/script&gt;
+</pre>
+<p>
+    Available client-side methods:
+</p>
+<ul>
+    <li>
+        You can enable the Upload using <em>enable()</em>
+    </li>
+    <li>
+        You can disable the Upload using <em>disable()</em>
+    </li>
+</ul>

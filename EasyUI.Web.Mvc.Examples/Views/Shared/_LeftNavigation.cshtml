@@ -1,0 +1,99 @@
+﻿@using System.Web.Mvc;
+@using EasyUI.Web.Mvc.UI;
+@using EasyUI.Web.Mvc;
+
+@if (ViewData["easyui.web.mvc.products.examples"] != null)
+{
+
+
+    @(Html.EasyUI().TreeView().Name("Nav_TreeView")
+                                .BindTo("easyui.web.mvc.products.examples", (item, siteMapNode) =>
+                                {
+                                    //string controller = ViewContext.RouteData.Route.GetRouteData(this.Context).Values["controller"].ToString();
+                                    //string controller = ViewContext.RouteData.Values["controller"].ToString();
+
+                                    //string controller = RouteData.Route.GetRouteData(this.HttpContext).Values["controller"].ToString();
+                                    //string controller = RouteData.Values["controller"].ToString();
+
+                                    // string controller = filterContext.RouteData.Values["controller"].ToString();
+
+                                    //item.Text = siteMapNode.Title;
+                                    if (siteMapNode.Title.ToUpper() == ViewContext.RouteData.Values["controller"].ToString().ToUpper())
+                                    {
+
+                                        item.Expanded = true;
+                                    }
+                                })
+    )
+
+
+
+    @*@(Html.EasyUI().PanelBar()
+        .Name("navigation-product-examples")
+        .HtmlAttributes(new { style = "width:250px;" })
+        .BindTo("easyui.web.mvc.products.examples", (item, node) =>
+        {
+            if (!string.IsNullOrEmpty(node.ControllerName) && !string.IsNullOrEmpty(node.ActionName))
+            {
+                item.ControllerName = node.ControllerName.ToLower();
+                item.ActionName = node.ActionName.ToLower();
+            }
+
+            item.SpriteCssClasses = "t" + item.Text;
+
+            if ("true".Equals(node.Attributes["isNew"]))
+            {
+                item.Text += "<span class='isNew'>new</span>";
+                item.Encoded = false;
+            }
+        })
+        .HighlightPath(true)
+        .ItemAction(item =>
+        {
+            if (!item.Items.Any() && !string.IsNullOrEmpty(Request.QueryString["theme"]))
+            {
+                item.RouteValues.Add("theme", Request.QueryString["theme"]);
+            }
+
+            if (item.Selected)
+            {
+                item.HtmlAttributes["class"] = "active-page";
+            }
+
+            if (item.Parent != null)
+            {
+                item.SpriteCssClasses = "";
+            }
+        }))
+    *@
+}
+
+
+
+@*@(Html.EasyUI().PanelBar()
+     .Name("navigation-controls")
+    .HtmlAttributes(new { style = "width:250px;" })
+     .BindTo("easyui.web.mvc.products", (item, node) =>
+     {
+         if (!string.IsNullOrEmpty(node.ControllerName) && !string.IsNullOrEmpty(node.ActionName))
+         {
+             item.ControllerName = node.ControllerName.ToLower();
+             item.ActionName = node.ActionName.ToLower();
+         }
+
+         item.SpriteCssClasses = "t" + item.Text;
+
+         if ("true".Equals(node.Attributes["isNew"]))
+         {
+             item.Text += "<span class='isNew'>new</span>";
+             item.Encoded = false;
+         }
+     })
+
+     .ItemAction(item =>
+     {
+         if (!item.Items.Any() && !string.IsNullOrEmpty(Request.QueryString["theme"]))
+         {
+             item.RouteValues.Add("theme", Request.QueryString["theme"]);
+         }
+     }))*@

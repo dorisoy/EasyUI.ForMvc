@@ -1,0 +1,9 @@
+@model decimal
+
+@(Html.EasyUI().CurrencyTextBox()
+        .Name(ViewData.TemplateInfo.GetFullHtmlFieldName(string.Empty))
+        .InputHtmlAttributes(new {style="width:100%"})
+        .MinValue(0)
+        .Value(Model)
+)
+

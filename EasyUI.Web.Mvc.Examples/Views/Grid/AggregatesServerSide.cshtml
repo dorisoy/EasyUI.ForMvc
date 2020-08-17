@@ -1,0 +1,38 @@
+@model IEnumerable<Product>
+
+@(Html.EasyUI().Grid(Model)
+      .Name("Grid")
+      .Columns(columns =>
+      {
+        columns.Bound(o => o.ProductName)
+                .Aggregate(aggregates => aggregates.Count())
+                .FooterTemplate(@<text>Total Count: @item.Count</text>)
+                .GroupFooterTemplate(@<text>Count: @item.Count</text>);
+            
+        columns.Bound(o => o.UnitPrice)
+                .Width(200)
+                .Aggregate(aggreages => aggreages.Sum())
+                .Format("{0:c}")
+                .FooterTemplate(@<text>Total Sum: @item.Sum.Format("{0:c}")</text>)
+                .GroupFooterTemplate(@<text>Sum: @item.Sum.Format("{0:c}")</text>);
+            
+        columns.Bound(o => o.UnitsOnOrder)
+                .Width(200)
+                .Aggregate(aggregates => aggregates.Average())
+                .FooterTemplate(@<text>Average: @item.Average</text>)
+                .GroupFooterTemplate(@<text>Average: @item.Average</text>);
+                   
+        columns.Bound(o => o.UnitsInStock)
+                .Width(100)
+                .Aggregate(aggregates => aggregates.Count().Min().Max())
+                .FooterTemplate(
+                @<text>
+                    <div>Min: @item.Min</div>
+                    <div>Max: @item.Max</div>
+                </text>)
+                .GroupHeaderTemplate(@<text>@item.Title: @item.Key (Count: @item.Count)</text>);
+       })
+        .Sortable()
+        .Pageable()
+        .Groupable(settings => settings.Groups(groups => groups.Add(o => o.UnitsInStock)).Visible(false))
+)

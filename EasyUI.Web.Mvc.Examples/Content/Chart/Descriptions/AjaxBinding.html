@@ -1,0 +1,22 @@
+﻿<p>
+    This example shows how to bind the EasyUI Chart for ASP.NET MVC to data returned from an Ajax request.
+    Necessary steps:
+</p>
+<ol>
+    <li>Configure the Chart to use Ajax binding via the <em>DataBinding</em> method:
+        <pre class="prettyprint">
+&lt;%= Html.EasyUI().Chart&lt;SalesData&gt;()
+        <em>.DataBinding(dataBinding => dataBinding.Ajax().Select("_SalesData", "Chart"))</em>
+        .Name("Chart")
+%&gt;</pre>
+    </li>
+    <li>
+        Return <em>JsonResult</em> from the action specified by the <em>Select</em> method:
+        <pre class="prettyprint">
+public ActionResult _Select()
+{
+    return Json(<em>SalesDataBuilder.GetCollection()</em>);
+}
+        </pre>
+    </li>
+</ol>

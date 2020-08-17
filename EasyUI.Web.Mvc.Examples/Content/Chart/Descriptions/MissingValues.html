@@ -1,0 +1,24 @@
+﻿<p>
+    The EasyUI Chart for ASP.NET MVC supports missing (<em>null</em>) values in the source data.
+    The exact behavior depends on the chart type:
+</p>
+<ul>
+    <li>
+        <p>
+            <strong>Bar and Column</strong><br />
+            Missing values are skipped.
+        </p>
+    </li>
+    <li>
+        <p>
+            <strong>Line</strong><br />
+            Missing values can be skipped, interpolated or treated as zero.
+        </p>
+    </li>
+    <li>
+        <p>
+            <strong>Stacked Line</strong><br />
+            Missing values are always treated as zero.
+        </p>
+    </li>
+</ul>

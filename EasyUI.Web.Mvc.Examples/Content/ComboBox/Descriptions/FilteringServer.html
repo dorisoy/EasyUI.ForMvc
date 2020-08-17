@@ -1,0 +1,31 @@
+﻿<p>
+This example shows the filtering feature of EasyUI ComboBox for ASP.NET MVC and EasyUI AutoComplete for ASP.NET MVC with server binding.
+</p>
+<p>
+    To enable filtering use the <code>Filterable</code> method:
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().ComboBox()
+        .Name("ComboBox")
+        <em>.Filterable()</em>
+%&gt;
+</pre>
+<p>
+    You can also choose between "StartsWith" and "Contains" filter options.
+</p>
+<pre class="prettyprint">
+&lt;%= Html.EasyUI().ComboBox()
+        .Name("ComboBox")
+        .Filterable(filtering =>
+        {
+            <em>filtering.FilterMode(AutoCompleteFilterMode.StartsWith);</em>
+        })
+%&gt;
+</pre>
+<p>
+    <em>When filtering is disabled <span class="cancellable">(default state)</span>,
+    combobox will scroll to the first matched item and highlight it.</em>
+</p>
+<p>
+    <strong>Filtering feature of the autocomplete component cannot be disabled.</strong>
+</p>

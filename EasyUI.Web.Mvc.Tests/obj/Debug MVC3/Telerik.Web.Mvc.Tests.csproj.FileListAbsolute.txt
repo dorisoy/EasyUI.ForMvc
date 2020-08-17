@@ -1,0 +1,9 @@
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Tests\bin\Debug MVC3\Telerik.Web.Mvc.Tests.dll
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Tests\bin\Debug MVC3\Telerik.Web.Mvc.Tests.pdb
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Tests\bin\Debug MVC3\Moq.dll
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Tests\bin\Debug MVC3\Telerik.Web.Mvc.dll
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Tests\bin\Debug MVC3\xunit.dll
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Tests\bin\Debug MVC3\Telerik.Web.Mvc.pdb
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Tests\obj\Debug MVC3\Telerik.Web.Mvc.Tests.csprojResolveAssemblyReference.cache
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Tests\obj\Debug MVC3\Telerik.Web.Mvc.Tests.dll
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Tests\obj\Debug MVC3\Telerik.Web.Mvc.Tests.pdb

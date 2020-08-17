@@ -1,0 +1,1 @@
+E:\ASP.NET开源项目\B2C\Telerik.Web.Mvc控件\Telerik.Web.Mvc.UI_2011_3_1115_Source\Telerik.Web.Mvc.Tests\obj\Debug MVC2\Telerik.Web.Mvc.Tests.csprojResolveAssemblyReference.cache

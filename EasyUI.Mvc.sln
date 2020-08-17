@@ -1,0 +1,113 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyUI.Web.Mvc", "EasyUI.Web.Mvc\EasyUI.Web.Mvc.csproj", "{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyUI.Web.Mvc.Examples", "EasyUI.Web.Mvc.Examples\EasyUI.Web.Mvc.Examples.csproj", "{6E626551-89A5-4625-8429-B442634725C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyUI.Web.Mvc.JavaScriptTests", "EasyUI.Web.Mvc.JavaScriptTests\EasyUI.Web.Mvc.JavaScriptTests.csproj", "{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyUI.MSBuildTasks", "EasyUI.MSBuildTasks\EasyUI.MSBuildTasks.csproj", "{39A7EE53-1908-45DA-93E1-B3C53F4429E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug MVC3|Any CPU = Debug MVC3|Any CPU
+		Debug MVC3|Mixed Platforms = Debug MVC3|Mixed Platforms
+		Debug MVC3|x86 = Debug MVC3|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release MVC3|Any CPU = Release MVC3|Any CPU
+		Release MVC3|Mixed Platforms = Release MVC3|Mixed Platforms
+		Release MVC3|x86 = Release MVC3|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Debug MVC3|Any CPU.ActiveCfg = Debug MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Debug MVC3|Any CPU.Build.0 = Debug MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Debug MVC3|Mixed Platforms.ActiveCfg = Debug MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Debug MVC3|Mixed Platforms.Build.0 = Debug MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Debug MVC3|x86.ActiveCfg = Debug MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Debug|Any CPU.ActiveCfg = Debug MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Debug|Any CPU.Build.0 = Debug MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Release MVC3|Any CPU.ActiveCfg = Release MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Release MVC3|Any CPU.Build.0 = Release MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Release MVC3|Mixed Platforms.ActiveCfg = Release MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Release MVC3|Mixed Platforms.Build.0 = Release MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Release MVC3|x86.ActiveCfg = Release MVC3|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Debug MVC3|Any CPU.ActiveCfg = Debug MVC3|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Debug MVC3|Any CPU.Build.0 = Debug MVC3|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Debug MVC3|Mixed Platforms.ActiveCfg = Debug MVC3|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Debug MVC3|Mixed Platforms.Build.0 = Debug MVC3|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Debug MVC3|x86.ActiveCfg = Debug MVC3|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Debug|Any CPU.ActiveCfg = Debug MVC3|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Release MVC3|Any CPU.ActiveCfg = Release MVC3|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Release MVC3|Any CPU.Build.0 = Release MVC3|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Release MVC3|Mixed Platforms.ActiveCfg = Release MVC3|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Release MVC3|Mixed Platforms.Build.0 = Release MVC3|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Release MVC3|x86.ActiveCfg = Release MVC3|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6E626551-89A5-4625-8429-B442634725C0}.Release|x86.ActiveCfg = Release|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Debug MVC3|Any CPU.ActiveCfg = Debug MVC3|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Debug MVC3|Any CPU.Build.0 = Debug MVC3|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Debug MVC3|Mixed Platforms.ActiveCfg = Debug MVC3|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Debug MVC3|Mixed Platforms.Build.0 = Debug MVC3|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Debug MVC3|x86.ActiveCfg = Debug MVC3|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Debug|Any CPU.ActiveCfg = Debug MVC3|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Release MVC3|Any CPU.ActiveCfg = Release MVC3|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Release MVC3|Any CPU.Build.0 = Release MVC3|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Release MVC3|Mixed Platforms.ActiveCfg = Release MVC3|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Release MVC3|Mixed Platforms.Build.0 = Release MVC3|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Release MVC3|x86.ActiveCfg = Release MVC3|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9AB0B48B-FB43-4EFF-A1DD-7A172CA4440F}.Release|x86.ActiveCfg = Release|Any CPU
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Debug MVC3|Any CPU.ActiveCfg = Debug|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Debug MVC3|Mixed Platforms.ActiveCfg = Debug|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Debug MVC3|Mixed Platforms.Build.0 = Debug|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Debug MVC3|x86.ActiveCfg = Debug|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Debug MVC3|x86.Build.0 = Debug|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Debug|x86.ActiveCfg = Debug|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Debug|x86.Build.0 = Debug|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Release MVC3|Any CPU.ActiveCfg = Release|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Release MVC3|Mixed Platforms.ActiveCfg = Release|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Release MVC3|Mixed Platforms.Build.0 = Release|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Release MVC3|x86.ActiveCfg = Release|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Release MVC3|x86.Build.0 = Release|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Release|Any CPU.ActiveCfg = Release|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Release|Mixed Platforms.Build.0 = Release|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Release|x86.ActiveCfg = Release|x86
+		{39A7EE53-1908-45DA-93E1-B3C53F4429E9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B11B754-82D1-4D97-93F5-C6FC01D383A3}
+	EndGlobalSection
+EndGlobal

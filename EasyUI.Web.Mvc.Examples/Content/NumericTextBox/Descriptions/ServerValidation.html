@@ -1,0 +1,19 @@
+﻿<p>
+    This example shows how EasyUI NumericTextBox for ASP.NET MVC is being validated through the built-in server-side validation capabilities of ASP.NET MVC.
+</p>
+<pre class="prettyprint">
+
+&lt%= Html.ValidationSummary() %&gt;
+&lt% using (Html.BeginForm("Action", "Controller")) { %&gt
+    &lt%= Html.EasyUI()
+            .NumericTextBox()
+            .Name("piecesOfCake")
+    %>
+    &lt%= Html.ValidationMessage("piecesOfCake", "*") %&gt
+    &lt;input type="submit" value="Post" /&gt
+<% } %>
+</pre>
+<p>
+    Additionally you can use NumericTextBoxFor extension in order to create NumericTextBox for a concrete <em>Model property</em>.
+    If it has <strong>Range</strong> attribute, NumericTextBox component will use it to define min and max value contraints.
+</p>

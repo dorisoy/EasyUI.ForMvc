@@ -1,0 +1,42 @@
+﻿@model TextBoxFirstLookModelView
+
+
+<div class="t-rtl">
+    @(Html.EasyUI().NumericTextBox()
+            .Name("NumericTextBox")
+            .HtmlAttributes(new { @class = "t-numerictextbox-rtl" })
+            .Value(42) 
+    )
+
+    @(Html.EasyUI().CurrencyTextBox()
+            .Name("CurrencyTextBox")
+            .HtmlAttributes(new { @class = "t-numerictextbox-rtl" })
+            .Value(42)
+    )
+
+    @(Html.EasyUI().PercentTextBox()
+            .Name("PercentTextBox")
+            .HtmlAttributes(new { @class = "t-numerictextbox-rtl" })
+            .Value(42)
+    )
+
+    @(Html.EasyUI().IntegerTextBox()
+            .Name("IntegerTextBox")
+            .HtmlAttributes(new { @class = "t-numerictextbox-rtl" })
+            .Value(42)
+)
+</div>
+
+@section HeadContent {
+
+    <style type="text/css">
+        
+        .t-numerictextbox
+        {
+            margin-bottom: 30px;
+            display: block !important;
+        }
+        
+    </style>
+
+}
